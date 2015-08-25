@@ -13,7 +13,7 @@ teiidUser/redhat1!
 **Datavirtualization Dashboard Credentials:**  
 dashboardAdmin/redhat1!
 
-RUNNING AND PREVIEWING WITHIN JBDS:  
+**RUNNING AND PREVIEWING WITHIN JBDS**:  
 **STEP 1:** Clone the Repository and Download Data Virtualization  
 -git clone https://github.com/jbossdemocentral/dv-gettingstarted.git  
 -Download from jboss.org http://www.jboss.org/products/datavirt/download/  
@@ -43,9 +43,9 @@ RUNNING AND PREVIEWING WITHIN JBDS:
 -Dashboard  
 		http://localhost:8080/dashboard/  
   
-**As Easy as 1,2,3....**
+As Easy as 1,2,3....
 
-STEPS TO RUN WITHOUT JBDS:  
+**STEPS TO RUN WITHOUT JBDS**:  
   
 **STEP 1:** Clone the Repository and Download Data Virtualization  
 -git clone https://github.com/jbossdemocentral/dv-gettingstarted.git  
@@ -67,6 +67,6 @@ Put the Data Virutalization Download, jboss-dv-installer-6.1.0.redhat-3.jar, int
 		http://localhost:8080  
 -Dashboard  
 		http://localhost:8080/dashboard/ 
-  
-**As Easy as 1,2,3....**
+ 
+As Easy as 1,2,3....
 
