@@ -1,9 +1,3 @@
 #Projects
 
-##usecase1 
-
-##usecase2
-
-##usecase3
-
-##usecase4
+The helloworldgettingstarted workspace contains the customercontext teiid project.
