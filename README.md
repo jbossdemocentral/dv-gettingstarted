@@ -1,6 +1,6 @@
 ## Data Virtualization Getting Started for a Developer Hellow World Experience
 
-![alt text](https://raw.githubusercontent.com/kpeeples/dv-gettingstarted/master/docs/images/dvdemo-gettingstarted2.png "Teiid VDBs")  
+![alt text](https://raw.githubusercontent.com/jbossdemocentral/dv-gettingstarted/master/docs/images/dvdemo-gettingstarted2.png "Teiid VDBs")  
 
 This Project contains a CSV file and XML File as datasources for a federated view in a Virtual Database.  You can view the project, preview data, deploy the VDB and browse to the OData URLs.
   
