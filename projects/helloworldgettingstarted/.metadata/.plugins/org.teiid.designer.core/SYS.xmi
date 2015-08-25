@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://www.metamatrix.com/metamodels/Diagram" xmlns:mmcore="http://www.metamatrix.com/metamodels/Core" xmlns:relational="http://www.metamatrix.com/metamodels/Relational">
+  <mmcore:ModelAnnotation xmi:uuid="mmuuid:49b9c0f9-2c4c-42d3-9409-2d847d29a1de" description="System" nameInSource="" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational" modelType="PHYSICAL" ProducerName="Teiid Designer" ProducerVersion="7.3.0.v20110218-1248-H252-Alpha1">
+    <modelImports xmi:uuid="mmuuid:16b9000a-e45f-40e1-b8d3-3879710d034d" name="XMLSchema" modelLocation="http://www.w3.org/2001/XMLSchema" modelType="PHYSICAL" primaryMetamodelUri="http://www.eclipse.org/xsd/2002/XSD"/>
+    <modelImports xmi:uuid="mmuuid:5b44c093-a71a-4102-9650-91771289d58b" name="SimpleDatatypes-instance" modelLocation="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance" modelType="TYPE" primaryMetamodelUri="http://www.eclipse.org/xsd/2002/XSD"/>
+  </mmcore:ModelAnnotation>
+  <relational:BaseTable xmi:uuid="mmuuid:47297c72-d621-4f4e-af4e-74060ac5f489" name="VirtualDatabases" system="true" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:42fa1249-8b24-4aae-a252-0a347db6ec30" name="Name" length="255" fixedLength="true" precision="255" nullable="NO_NULLS" updateable="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:c876d749-a512-4810-9910-3034ca524c45" name="Version" length="50" fixedLength="true" precision="50" nullable="NO_NULLS" updateable="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+  </relational:BaseTable>
+  <relational:BaseTable xmi:uuid="mmuuid:8648a554-b2ad-4e8e-84ca-2ec618b311a9" name="Schemas" system="true" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:73dbf95b-a283-4f0a-81b9-9b98e09c2906" name="VDBName" length="255">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:654112f8-bb4c-4453-9e4d-f3a96fba61ec" name="Name" length="255">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:bab257d7-cced-4605-9b40-8ca6c078aca7" name="IsPhysical" length="1" fixedLength="true" precision="1" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:ad232e4d-9c01-4d0c-bc57-0459d9db918a" name="UID" length="50" fixedLength="true" precision="50" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:1cb99300-a527-4a26-b4e6-08ebd92a781d" name="Description" length="255" precision="255">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:eadfaba5-ce44-4529-816f-6af94666baec" name="PrimaryMetamodelURI" length="255" precision="255" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:31746839-e019-4321-90cb-a557e1d4754e" name="OID" length="10" fixedLength="true" precision="10" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+  </relational:BaseTable>
+  <relational:BaseTable xmi:uuid="mmuuid:8551b3bd-11cc-4049-9bcf-fe91a0eb7ba7" name="Tables" system="true" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:58de905f-9d64-4831-a985-da6d082ff709" name="VDBName" length="255">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:95bd960c-fd84-44c9-9831-692376f69b46" name="SchemaName" length="255">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:ef487cc2-1214-439c-af6e-da431df00d2c" name="Name" length="255" fixedLength="true" precision="255" nullable="NO_NULLS" updateable="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:4814a0af-4e8f-4f55-9b25-3148d90d3d9b" name="Type" length="20" fixedLength="true" precision="20" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:1f036fb0-b841-450c-8462-986cdd57e921" name="NameInSource" length="255" fixedLength="true" precision="255" updateable="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:e27712f6-a0a6-452e-848d-9de77691e939" name="IsPhysical" length="1" fixedLength="true" precision="1" nullable="NO_NULLS" updateable="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:5144d230-2b0e-4255-b321-65b9f6f6f76c" name="SupportsUpdates" length="1" fixedLength="true" precision="1" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:6afe3737-26f9-43a8-88db-86531b5dc66c" name="UID" length="50" fixedLength="true" precision="50" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:24cdad3a-e8f7-4376-bb32-79f8bc8eeed2" name="Cardinality" length="10" precision="10" nullable="NO_NULLS" updateable="false" searchability="ALL_EXCEPT_LIKE">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:51605e41-5cb0-40ca-8c4a-4eca52780afc" name="Description" length="255" precision="255">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:9fa7987c-7dc8-4102-9cc0-5658d5b46382" name="IsSystem" length="1" precision="1">
+      <type href="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:89265cba-ab85-48c2-960a-a5a9594ba6d0" name="IsMaterialized" nullable="NO_NULLS" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:dae79c58-b381-4275-8c1c-b299d732d355" name="OID" length="10" fixedLength="true" precision="10" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+  </relational:BaseTable>
+  <relational:BaseTable xmi:uuid="mmuuid:9a8794f9-66f8-49e8-8576-89d212d0f957" name="DataTypes" system="true" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:17f7de33-e6f0-4b9c-b55e-a87f6b7bb9b3" name="Name" length="100" fixedLength="true" precision="100" nullable="NO_NULLS" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:02f27c5d-af55-4677-b91b-8690793671b2" name="IsStandard" length="1" fixedLength="true" precision="1" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:983714a2-bd0b-4fad-b4e8-dfb7832e9c4b" name="IsPhysical" length="1" fixedLength="true" precision="1" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:48081cdd-9e90-4440-a956-4a32af96d7f4" name="TypeName" length="100" fixedLength="true" precision="100" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:4c68ef90-8042-44ab-896a-bb3890a8fe04" name="JavaClass" length="500" fixedLength="true" precision="500" nullable="NO_NULLS" updateable="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:e8655204-e97a-45cd-909b-1e37731e9546" name="Scale" length="10" fixedLength="true" precision="10" defaultValue="(0)" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:0668382a-f9c3-4507-8b0f-df65a2ebbf2f" name="TypeLength" length="10" fixedLength="true" precision="10" nullable="NO_NULLS" defaultValue="(0)" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:278b0534-1164-495e-a8c6-de45e0ff53a4" name="NullType" length="20" fixedLength="true" precision="20" nullable="NO_NULLS" updateable="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:235cea48-b2b9-41d5-b296-8ab9c649b6e7" name="IsSigned" length="1" fixedLength="true" precision="1" nullable="NO_NULLS" defaultValue="('0')" updateable="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:2a1568e2-776a-474b-981f-040a6ad63361" name="IsAutoIncremented" length="1" fixedLength="true" precision="1" nullable="NO_NULLS" defaultValue="('0')" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:1468aaf2-6481-4d10-9554-44d0363fe571" name="IsCaseSensitive" length="1" fixedLength="true" precision="1" nullable="NO_NULLS" defaultValue="('0')" updateable="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:8673c810-7162-4331-ba0b-6fc3530d2d1c" name="Precision" length="10" fixedLength="true" precision="10" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:967ab8fd-3226-4a78-8cf2-2eb7fbf2981a" name="Radix" length="10" fixedLength="true" precision="10" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:d8494fa3-40e4-44cd-b0d8-da5c83685a75" name="SearchType" length="20" fixedLength="true" precision="20" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:dd57f577-ffc4-4b55-8f7f-355b9ea3ce37" name="UID" length="50" fixedLength="true" precision="50" nullable="NO_NULLS" updateable="false" caseSensitive="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:3c7bc9d0-b73f-49a0-b9ab-dc97a4d2a124" name="RuntimeType" length="64" fixedLength="true" precision="64" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:03beb57c-968b-4821-a6ae-cb1154cfadee" name="BaseType" length="64" fixedLength="true" precision="64" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:b7d95ef6-63a3-441c-8de5-c98e2e577ea3" name="Description" length="255" precision="255">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:a3c41050-80b6-4fb5-9c6b-5e20c0839cda" name="OID" length="10" fixedLength="true" precision="10" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+  </relational:BaseTable>
+  <relational:BaseTable xmi:uuid="mmuuid:1c9a5cb2-17b1-4e4a-8b0e-3a42bd052509" name="Columns" system="true" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:83f19a81-1243-4751-8c99-daddbf37b1d7" name="VDBName" length="255" fixedLength="true" precision="255" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:859288c9-cd78-4407-90fc-61b5d310e2ab" name="SchemaName" length="255">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:2c09c9d1-2f25-45de-81cf-eeb2a5157d34" name="TableName" length="255" fixedLength="true" precision="255" nullable="NO_NULLS" updateable="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:d1f44a6d-3e39-4251-b873-1280c2b035b3" name="Name" length="255" fixedLength="true" precision="255" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:dbc8cd09-1b47-43c5-82ec-aba525b85cc4" name="Position" length="10" fixedLength="true" precision="10" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:fac72c6e-41dc-4a1b-8af3-f0796690d9cc" name="NameInSource" length="255" fixedLength="true" precision="255" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:9a8dc0d5-e65c-4032-a066-187f8d2e73ea" name="DataType" length="100" fixedLength="true" precision="100" nullable="NO_NULLS" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:cc6c6113-8d70-40c8-84c0-94e17c14e22e" name="Scale" length="10" fixedLength="true" precision="10" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:b36ea0f6-cbff-4049-bc9c-8ec9928be048" name="Length" length="10" fixedLength="true" precision="10" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:571aa4ce-3254-4a2b-aa48-1cb23a0c47ed" name="IsLengthFixed" length="1" fixedLength="true" precision="1" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:c2a50f93-0040-41ec-ad7b-e8511296555f" name="SupportsSelect" length="1" fixedLength="true" precision="1" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:fab660d1-36bf-4a5b-bbe6-9a543e0ebd76" name="SupportsUpdates" length="1" fixedLength="true" precision="1" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:21ee166a-b462-41a1-b88d-dc79f63d6e17" name="IsCaseSensitive" length="1" fixedLength="true" precision="1" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:36be2afa-8ebc-4af8-acc5-a887cf2b5a86" name="IsSigned" length="1" fixedLength="true" precision="1" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:b28a2963-36e0-4b4a-a8f8-a2c06f2b440a" name="IsCurrency" length="1" fixedLength="true" precision="1" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:0d41e284-f274-4fd1-8576-7696f4b758d0" name="IsAutoIncremented" length="1" fixedLength="true" precision="1" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:4d83bdbb-a7ce-44cc-a201-021a517d3c1a" name="NullType" length="20" fixedLength="true" precision="20" nullable="NO_NULLS" updateable="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:dba0f97d-fab5-45f6-a1eb-3459ab3fcc74" name="MinRange" length="50" fixedLength="true" precision="50" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:0b0df4a5-7de5-4315-94f7-22c84958302e" name="MaxRange" length="50" fixedLength="true" precision="50" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:0017cd41-d873-4fcb-a2e7-15cdac7df3a5" name="DistinctCount" length="10" precision="10">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:d00d1104-40ba-40be-b684-4c0c803615f8" name="NullCount" length="10" precision="10">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:3037138a-bb20-4485-ba01-75bc20b1a532" name="SearchType" length="20" fixedLength="true" precision="20" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:172b133e-5bf1-4020-953c-de4446b1e64a" name="Format" length="255" fixedLength="true" precision="255" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:7e853988-356b-4c7c-83d4-a9f015bff279" name="DefaultValue" length="255" fixedLength="true" precision="255" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:6b8d5df5-7bd2-425c-8b2b-e427e026ef66" name="JavaClass" length="500" fixedLength="true" precision="500" nullable="NO_NULLS" updateable="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:db3d49e2-fe1d-438b-8d07-847bf58506ab" name="Precision" length="10" fixedLength="true" precision="10" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:de5def94-2804-4c91-91ed-26d630ce8afe" name="CharOctetLength" length="10" fixedLength="true" precision="10" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:43a6124c-972f-4c4c-af05-24080c2a8ad7" name="Radix" length="10" fixedLength="true" precision="10" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:5f491c75-769b-4908-9f68-2a9a486607bb" name="UID" length="50" fixedLength="true" precision="50" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:74d73b53-b723-419e-9fea-de56408409ee" name="Description" length="255" precision="255">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:b9e5ba07-4a8d-4589-8aa9-597ae70d18a4" name="OID" length="10" fixedLength="true" precision="10" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+  </relational:BaseTable>
+  <relational:BaseTable xmi:uuid="mmuuid:1e5135dc-ce5d-4b25-a8ff-63f5440b3108" name="Keys" system="true" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:5785b523-7da3-42c1-8920-66daa1f7fa1d" name="VDBName" length="255" fixedLength="true" precision="255" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:4a7fc059-208e-4f98-b6ef-cb7c6102a327" name="SchemaName" length="255">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:7d9540bd-b51f-4206-8c33-b39c5ba8bb8b" name="TableName" length="2048" fixedLength="true" precision="2048" nullable="NO_NULLS" updateable="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:149de302-2107-45ca-839d-fc0dd1e7d7f4" name="Name" length="255" fixedLength="true" precision="255" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:175e21b2-24c3-4677-a253-6d7cdb513a9a" name="Description" length="255" fixedLength="true" precision="255" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:a52a6169-99e0-4b7e-9dc6-3a93ffa6094a" name="NameInSource" length="255" fixedLength="true" precision="255" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:29e73c18-afec-43a9-81ab-7378d6daf20b" name="Type" length="20" fixedLength="true" precision="20" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:ea96cb7c-2dcf-453c-b83a-1aaa921d8f92" name="IsIndexed" length="1" fixedLength="true" precision="1" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:1cf4c5ad-5932-47ec-8593-385b75bfeba8" name="RefKeyUID" length="50" fixedLength="true" precision="50" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:782218d1-5337-48c6-9070-0aafd4c6cd20" name="UID" length="50" fixedLength="true" precision="50" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:d781f893-bdf3-4dc1-956f-7e7b1a138c99" name="OID" length="10" fixedLength="true" precision="10" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+  </relational:BaseTable>
+  <relational:BaseTable xmi:uuid="mmuuid:14946083-3bd5-42d5-8283-1c0694347c29" name="KeyColumns" system="true" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:f062eb9c-4854-47fb-b7bd-a4e23c782b62" name="VDBName" length="255" fixedLength="true" precision="255" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:787be966-cf12-4956-907f-a8e6dc1009dc" name="SchemaName" length="255">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:c24fad72-0c0d-4260-96ae-f188ad77b137" name="TableName" length="2048" fixedLength="true" precision="2048" nullable="NO_NULLS" updateable="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:08bda0c7-5f66-4fed-8285-d74b63eeb0e2" name="Name" length="255" fixedLength="true" precision="255" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:da4bef58-83f4-4b88-8bb0-2dc8990be539" name="KeyName" length="255" fixedLength="true" precision="255" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:df9e15e6-ab77-486d-bfe0-0adc378aa99d" name="KeyType" length="20" fixedLength="true" precision="20" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:aafbdf50-25aa-427b-b322-7cb36094a1e2" name="RefKeyUID" length="50" fixedLength="true" precision="50" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:0d994a45-4f52-4b79-9b31-7ef22331fee2" name="UID" length="50" fixedLength="true" precision="50" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:92a4849c-ed0e-4f5f-a108-d7d71a5aba25" name="Position" length="10" fixedLength="true" precision="10">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:207d123c-a3ff-4e4e-85ae-6f3b0debfc06" name="OID" length="10" fixedLength="true" precision="10" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+  </relational:BaseTable>
+  <relational:BaseTable xmi:uuid="mmuuid:0bc132a5-9f8d-4a3c-9f5d-98156a98a962" name="Procedures" system="true" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:1d664747-4a95-4605-8b28-381bed3121f1" name="VDBName" length="255" fixedLength="true" precision="255" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:53a84865-334e-4750-b343-de2411d56e3e" name="SchemaName" length="255">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:bd17e98a-c40a-43b1-93ac-88d62937c051" name="Name" length="255" fixedLength="true" precision="255" nullable="NO_NULLS" updateable="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:a4e7a0fd-c340-49a9-9ac0-8328caaffda8" name="NameInSource" length="255" fixedLength="true" precision="255" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:b01164c8-dd10-410d-a91b-fcb2fc0450ce" name="ReturnsResults" length="1" fixedLength="true" precision="1" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:de9df25a-c886-46e0-ae3a-8eb6792e43f4" name="UID" length="50" fixedLength="true" precision="50" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:fa0b5db7-acb1-4975-8410-d5d27df46040" name="Description" length="255" precision="225">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:c80c02d2-7174-4cc4-b347-e921a80f568c" name="OID" length="10" fixedLength="true" precision="10" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+  </relational:BaseTable>
+  <relational:BaseTable xmi:uuid="mmuuid:a56bd7fe-c87a-411c-8f5d-661975a25626" name="ProcedureParams" system="true" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:f832f316-2403-43fa-9ccc-c3ab9d38acca" name="VDBName" length="255" fixedLength="true" precision="255" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:88497911-619c-4ca8-b482-8885d940706a" name="SchemaName" length="255">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:8081b3a6-fc79-42fd-b7c9-a19d682a1658" name="ProcedureName" length="255" fixedLength="true" precision="255" nullable="NO_NULLS" updateable="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:2bf20c6f-5a95-436d-8f30-a24d164e77a4" name="Name" length="255" fixedLength="true" precision="255" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:207a09af-65b8-405f-b1cb-537bc8632fa4" name="DataType" length="25" fixedLength="true" precision="25" nullable="NO_NULLS" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:5fdefd17-65f4-4350-9ee0-0ed3c34d10ae" name="Position" length="10" fixedLength="true" precision="10" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:76a1981b-1226-4a55-9acf-82a061cc8642" name="Type" length="100" fixedLength="true" precision="100" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:4033f891-5ef5-4a75-8a50-bd1d021e43ad" name="Optional" length="1" fixedLength="true" precision="1" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:00fe7cad-0a83-42f0-90f2-d6a9584916b2" name="Precision" length="10" fixedLength="true" precision="10" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:791d7a29-8fc5-4735-9144-1accc114b58e" name="TypeLength" length="10" fixedLength="true" precision="10" nullable="NO_NULLS" defaultValue="(0)" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:360c8b1d-4b3d-42fd-952c-bf5763cad69e" name="Scale" length="10" fixedLength="true" precision="10" nullable="NO_NULLS" defaultValue="(0)" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:8df37c99-3b12-4789-8128-4aa496f895c4" name="Radix" length="10" fixedLength="true" precision="10" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:d887c203-6bf5-462b-b2f0-f5302e2f4bcd" name="NullType" length="10" fixedLength="true" precision="10" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:a278de2e-89f1-4281-9e63-54aebb6062ce" name="UID" length="50">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:05ac4703-5c2c-4410-93b7-19b39d90c803" name="Description" length="255">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:72125f93-846f-413c-82e1-fa3227fb043f" name="OID" length="10" fixedLength="true" precision="10" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+  </relational:BaseTable>
+  <relational:BaseTable xmi:uuid="mmuuid:7a45e50a-d03f-4548-ba35-761651bbca85" name="Properties" system="true" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:ba007c56-04b6-4981-ab89-3fdd33ff0de8" name="Name" length="255" fixedLength="true" precision="255" nullable="NO_NULLS" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:c917257d-06b7-41dd-a6cb-44c0ff0f897e" name="Value" length="255" fixedLength="true" precision="255" nullable="NO_NULLS" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:b333969a-83e0-4010-9463-9a0088da6c83" name="UID" length="50" fixedLength="true" precision="50" nullable="NO_NULLS" updateable="false" caseSensitive="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:54c1a7dc-5ca8-4d34-8672-e76d63fe3b95" name="OID" length="10" fixedLength="true" precision="10" nullable="NO_NULLS" updateable="false" caseSensitive="false" signed="false">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:c0b630b2-5f71-4bee-8359-07c2629e355b" name="ClobValue" length="2097152">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+  </relational:BaseTable>
+  <mmcore:AnnotationContainer xmi:uuid="mmuuid:b6d6894d-cc73-4237-9b86-b8dc74559af2">
+    <annotations xmi:uuid="mmuuid:eb05475e-9a45-413a-a478-d1e3c937c4f3" description="Gets all groups that are not XML Mapping Classes"/>
+  </mmcore:AnnotationContainer>
+  <relational:BaseTable xmi:uuid="mmuuid:6a9653e8-a337-41b2-86fa-77b98f409a29" name="ReferenceKeyColumns" system="true" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:f615a661-2c36-4ab1-b72b-5e13e99e052c" name="PKTABLE_CAT" length="255" precision="1" format="">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:ef7b3b79-fb51-42ef-a723-080ed0a6e3bc" name="PKTABLE_SCHEM" length="255" precision="255">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:6d420bc2-0f85-4da9-833d-d71b428b0743" name="PKTABLE_NAME" length="255" precision="255">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:0125a80a-95f9-486f-aa90-debb21cb5f1b" name="PKCOLUMN_NAME" length="255" precision="255">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:a0095da3-1258-44dc-bab9-33eacf886a28" name="FKTABLE_CAT" length="255" precision="1">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:93a35adf-b6b1-4d9c-bdef-d336a84f478e" name="FKTABLE_SCHEM" length="255" precision="255">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:53284aaa-4c07-4930-8a0e-5e2aaa2da5cb" name="FKTABLE_NAME" length="255" precision="255">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:f4b2b32c-e411-45e6-a236-fec4718f0874" name="FKCOLUMN_NAME" length="255" precision="255">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:4884ac83-84ed-4b67-9f1a-bd79c0199269" name="KEY_SEQ" length="5" precision="5">
+      <type href="http://www.w3.org/2001/XMLSchema#short"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:30d5ae74-b19e-4186-97e1-aeff5801e44f" name="UPDATE_RULE" length="10" precision="10">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:9207f4df-a5ce-43bd-b3b2-fee57e459849" name="DELETE_RULE" length="10" precision="10">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:a9ca7516-6898-419d-b1ad-7d174d946d07" name="FK_NAME" length="255" precision="255">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:ac210a6d-4de6-4d71-aa9b-e3d34baca81a" name="PK_NAME" length="255" precision="255">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:88380f55-2cbd-4325-b9a3-9dcaa88a690e" name="DEFERRABILITY" length="10" precision="10">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+  </relational:BaseTable>
+  <diagram:DiagramContainer xmi:uuid="mmuuid:540cf93e-029a-40e0-a19f-4f366bd96f04">
+    <diagram xmi:uuid="mmuuid:16dea60b-a2d5-48ca-92fd-3becb5fa4f0b" type="packageDiagramType" target="mmuuid/49b9c0f9-2c4c-42d3-9409-2d847d29a1de">
+      <diagramEntity xmi:uuid="mmuuid:4556bb2f-9c5a-4015-828b-b399ebc1209e" name="VirtualDatabases" modelObject="mmuuid/47297c72-d621-4f4e-af4e-74060ac5f489" xPosition="1202" yPosition="240"/>
+      <diagramEntity xmi:uuid="mmuuid:4188812e-2569-4851-8ba5-b799ffaf54dc" name="Schemas" modelObject="mmuuid/8648a554-b2ad-4e8e-84ca-2ec618b311a9" xPosition="10" yPosition="826"/>
+      <diagramEntity xmi:uuid="mmuuid:49ffa0b7-9362-4508-aced-82463de0f602" name="Tables" modelObject="mmuuid/8551b3bd-11cc-4049-9bcf-fe91a0eb7ba7" xPosition="308" yPosition="730"/>
+      <diagramEntity xmi:uuid="mmuuid:8d89b49f-4a15-484c-a5bb-a8e8ce6aded6" modelObject="mmuuid/9a8794f9-66f8-49e8-8576-89d212d0f957" xPosition="1202" yPosition="362"/>
+      <diagramEntity xmi:uuid="mmuuid:19aaec1b-9181-4580-b192-afae9e7c76dd" name="Columns" modelObject="mmuuid/1c9a5cb2-17b1-4e4a-8b0e-3a42bd052509" xPosition="775" yPosition="8"/>
+      <diagramEntity xmi:uuid="mmuuid:ce913aca-2e2e-452f-804e-2d01596a1a9c" modelObject="mmuuid/1e5135dc-ce5d-4b25-a8ff-63f5440b3108" xPosition="532" yPosition="13"/>
+      <diagramEntity xmi:uuid="mmuuid:0ca1f778-53f8-4f5d-8d5a-116319a14ffb" name="KeyColumns" modelObject="mmuuid/14946083-3bd5-42d5-8283-1c0694347c29" xPosition="10" yPosition="560"/>
+      <diagramEntity xmi:uuid="mmuuid:8f485d6d-bbea-4932-a3e6-047d48fe51e2" modelObject="mmuuid/0bc132a5-9f8d-4a3c-9f5d-98156a98a962" xPosition="1202" yPosition="10"/>
+      <diagramEntity xmi:uuid="mmuuid:17c364da-1341-4706-9056-d9480b472820" modelObject="mmuuid/a56bd7fe-c87a-411c-8f5d-661975a25626" xPosition="308" yPosition="10"/>
+      <diagramEntity xmi:uuid="mmuuid:237b4264-767c-47e9-a789-459e52dcb65d" name="Properties" modelObject="mmuuid/7a45e50a-d03f-4548-ba35-761651bbca85" xPosition="606" yPosition="822"/>
+      <diagramEntity xmi:uuid="mmuuid:96687e0c-2571-4747-920d-4082d7f9c0c9" modelObject="mmuuid/6a9653e8-a337-41b2-86fa-77b98f409a29" xPosition="10" yPosition="10"/>
+      <diagramEntity xmi:uuid="mmuuid:7e23fb65-6ae4-41bf-aeb2-5a73d772f2fb" modelObject="mmuuid/68497bd9-30f5-461b-bf13-6b26aeb2fc4f"/>
+    </diagram>
+  </diagram:DiagramContainer>
+  <relational:Procedure xmi:uuid="mmuuid:68497bd9-30f5-461b-bf13-6b26aeb2fc4f" name="getXMLSchemas">
+    <parameters xmi:uuid="mmuuid:85b88af5-f0b8-401f-b35a-ccee56155492" name="document">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </parameters>
+    <result xmi:uuid="mmuuid:727af61f-099c-44b2-bb07-2522ac42a4e1" name="schemas">
+      <columns xmi:uuid="mmuuid:003980bb-38bb-41ad-b8c2-c87ca47aa554" name="schema">
+        <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#XMLLiteral"/>
+      </columns>
+    </result>
+  </relational:Procedure>
+</xmi:XMI>

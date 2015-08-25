@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+  <server default="true" host="localhost" parentServerId="JBoss Enterprise Application Platform 6.1+1439402225100" version="8.6.0">
+    <admin password="VE9LIyMhVUZBeGFlX0RxY05nVk1heGdidVZzdTQ0MHY1NG93UUVMdHJIbmVsMVVGM0tmcXFLbnBabFE2UWFlMmYtbUhDM2xJVDBaWUtVUVBCMV9PV2dha1hvd2c=" port="9999" secure="false" user="admin"/>
+    <jdbc jdbcpassword="VE9LIyMhR0JlbjQ3dkNSR1dkN2hrbHZZUHpFdzdRMEVGY2lmMENELUJPVGFDRlM5VEUwUWVXYm12OGhvbzYwd0xuYlR6QzVnN0QzRjhIZTU0d2kyT0tfdE5Pa2c=" jdbcport="31000" jdbcsecure="false" jdbcuser="user"/>
+  </server>
+</servers>

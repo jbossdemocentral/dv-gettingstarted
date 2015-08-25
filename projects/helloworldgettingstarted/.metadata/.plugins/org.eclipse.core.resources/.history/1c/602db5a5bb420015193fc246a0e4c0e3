@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="ASCII"?>
+<mmcore:ModelAnnotation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:mmcore="http://www.metamatrix.com/metamodels/Core" xmi:uuid="mmuuid:e4cd2bfb-e329-4155-bbf2-77244269ebc3" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational" modelType="VIRTUAL" ProducerName="Teiid Designer" ProducerVersion="9.0.2.Final-v20150615-1425-B1128"/>

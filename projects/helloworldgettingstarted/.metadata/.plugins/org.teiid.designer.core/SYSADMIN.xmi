@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://www.metamatrix.com/metamodels/Diagram" xmlns:mmcore="http://www.metamatrix.com/metamodels/Core" xmlns:relational="http://www.metamatrix.com/metamodels/Relational">
+  <mmcore:ModelAnnotation xmi:uuid="mmuuid:82f6153e-31e0-4034-b335-013cb418da34" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational" modelType="PHYSICAL" ProducerName="Teiid Designer" ProducerVersion="7.3.0.v20110218-1248-H252-Alpha1">
+    <modelImports xmi:uuid="mmuuid:bc63f7bc-be4a-4c71-af9e-48d7c6327e47" name="SimpleDatatypes-instance" modelLocation="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance" modelType="TYPE" primaryMetamodelUri="http://www.eclipse.org/xsd/2002/XSD"/>
+    <modelImports xmi:uuid="mmuuid:b5fad065-4a5c-40dc-9fed-d4e9ca345095" name="XMLSchema" modelLocation="http://www.w3.org/2001/XMLSchema" modelType="TYPE" primaryMetamodelUri="http://www.eclipse.org/xsd/2002/XSD"/>
+  </mmcore:ModelAnnotation>
+  <diagram:DiagramContainer xmi:uuid="mmuuid:ff84b2bb-2ffc-4cdc-91f3-ea2650468484">
+    <diagram xmi:uuid="mmuuid:400bfa7e-6c17-464f-b5c4-038835ed7142" type="packageDiagramType" target="mmuuid/82f6153e-31e0-4034-b335-013cb418da34">
+      <diagramEntity xmi:uuid="mmuuid:7c819231-af24-4069-bd84-2f406aaccbc4" modelObject="mmuuid/52178344-dca8-4c76-8549-00a4515c7044" xPosition="726" yPosition="39"/>
+      <diagramEntity xmi:uuid="mmuuid:448285d4-48de-428d-bd46-22948236935e" modelObject="mmuuid/1674912b-af56-465a-a1b9-d1de8b761f10" xPosition="188" yPosition="38"/>
+      <diagramEntity xmi:uuid="mmuuid:4e93f1ec-0f93-434f-9ce8-79803c07b9f7" name="MatViews" modelObject="mmuuid/520ba1e8-3553-460f-8d18-9b43f089e256" xPosition="454" yPosition="183"/>
+      <diagramEntity xmi:uuid="mmuuid:d4a0b358-886f-4b96-8ff6-d6ab7613efdd" name="VDBResources" modelObject="mmuuid/1785804d-beaf-4831-9531-e59164fedd49" xPosition="446" yPosition="45"/>
+      <diagramEntity xmi:uuid="mmuuid:3a306a51-3f07-4f8e-bd95-e05a8805f368" name="setTableStats" modelObject="mmuuid/6d167c35-04d1-41f6-83ff-888c39423823"/>
+      <diagramEntity xmi:uuid="mmuuid:dd564799-92cb-4bdf-8659-d21a901f89ec" name="setColumnStats" modelObject="mmuuid/49c367be-918f-43be-8b9e-99e275179859" xPosition="20" yPosition="20"/>
+      <diagramEntity xmi:uuid="mmuuid:ab8355d4-3c9b-4d7d-bae4-77c3d5c6fb30" name="setProperty" modelObject="mmuuid/8db9b08e-3d6e-415a-9ceb-3fef726f424c" xPosition="20" yPosition="20"/>
+      <diagramEntity xmi:uuid="mmuuid:41a32a1e-4f56-48e6-970c-ce40f52c4abb" name="logMsg" modelObject="mmuuid/9a754e95-853b-40b2-a085-56d57f45953d"/>
+      <diagramEntity xmi:uuid="mmuuid:4ba6baae-c14e-4566-b51a-ea69369d134f" name="isLoggable" modelObject="mmuuid/36769e93-4cc3-417b-853e-5ee5e6653d01" xPosition="20" yPosition="20"/>
+    </diagram>
+  </diagram:DiagramContainer>
+  <relational:Procedure xmi:uuid="mmuuid:52178344-dca8-4c76-8549-00a4515c7044" name="refreshMatView">
+    <parameters xmi:uuid="mmuuid:e0c28e00-d987-48e4-8c60-5f637f10bf33" name="ViewName">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </parameters>
+    <parameters xmi:uuid="mmuuid:5736cfd3-750f-42d8-b083-102061e11c60" name="Invalidate" defaultValue="false">
+      <type href="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </parameters>
+    <parameters xmi:uuid="mmuuid:d07a6a75-aa12-4dac-8eab-b2acdbaaffd8" name="RowsUpdated" direction="RETURN">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </parameters>
+  </relational:Procedure>
+  <relational:Procedure xmi:uuid="mmuuid:1674912b-af56-465a-a1b9-d1de8b761f10" name="refreshMatViewRow">
+    <parameters xmi:uuid="mmuuid:ba635c44-a052-496d-9c35-ca010c0ebebe" name="ViewName">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </parameters>
+    <parameters xmi:uuid="mmuuid:7af5a63b-1b91-4d1e-912e-846a7e84c579" name="Key">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#object"/>
+    </parameters>
+    <parameters xmi:uuid="mmuuid:05a6a9be-c014-4d06-bcac-746cee4f118b" name="RowsUpdated" direction="RETURN">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </parameters>
+  </relational:Procedure>
+  <relational:BaseTable xmi:uuid="mmuuid:520ba1e8-3553-460f-8d18-9b43f089e256" name="MatViews" system="true" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:c1ce9841-e272-4839-8c78-777a5f68d241" name="VDBName" length="255" nullable="NO_NULLS" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:2738c484-d24d-4c40-b0b7-e734afb03450" name="SchemaName" length="255" nullable="NO_NULLS" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:0f56d35c-e450-4b4f-86b0-bdb4f1015c57" name="Name" length="255" nullable="NO_NULLS" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:a95dba1c-283e-4f48-9671-34cecdb7d0e3" name="TargetSchemaName" length="255" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:d2831595-d6f5-4cca-aa5d-2ff2530d0ab1" name="TargetName" length="4000" format="" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:13098912-bce2-4842-9ea9-b162fcd7383e" name="Valid" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:c67365c3-f252-40f4-aae6-8971d3b1b153" name="LoadState" length="255" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:33970a66-7ad4-411f-a6c4-545746747fe6" name="Updated" updateable="false">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#timestamp"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:abe699b0-b6bc-4413-9172-0a21ca9664d2" name="Cardinality" length="10" precision="10" maximumValue="" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+  </relational:BaseTable>
+  <mmcore:AnnotationContainer xmi:uuid="mmuuid:1e5d1877-5042-4665-a56f-49e268f3f4a8"/>
+  <relational:BaseTable xmi:uuid="mmuuid:1785804d-beaf-4831-9531-e59164fedd49" name="VDBResources" system="true" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:b1bc5150-3dcc-452e-9e75-4a506997f612" name="resourcePath" length="255" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:f9421669-3564-451d-9293-96c1e5e72c4f" name="contents" updateable="false">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#blob"/>
+    </columns>
+  </relational:BaseTable>
+  <relational:Procedure xmi:uuid="mmuuid:6d167c35-04d1-41f6-83ff-888c39423823" name="setTableStats">
+    <parameters xmi:uuid="mmuuid:28d8ad4a-e091-4934-afd9-7d27310bd370" name="tableName">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </parameters>
+    <parameters xmi:uuid="mmuuid:0aba7849-7fd3-4bc6-a3d3-dfe433bc67a4" name="cardinality">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </parameters>
+  </relational:Procedure>
+  <relational:Procedure xmi:uuid="mmuuid:49c367be-918f-43be-8b9e-99e275179859" name="setColumnStats">
+    <parameters xmi:uuid="mmuuid:4dcab018-ca4a-467b-96cc-7f28734c840e" name="tableName">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </parameters>
+    <parameters xmi:uuid="mmuuid:76553706-632f-4e60-8489-9d0361f58541" name="columnName">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </parameters>
+    <parameters xmi:uuid="mmuuid:2c61976e-abb5-4c74-bdae-278681b82aa3" name="distinctCount" nativeType="" nullable="NULLABLE">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </parameters>
+    <parameters xmi:uuid="mmuuid:44b8c83c-9fcd-4bd2-a730-76e401205536" name="nullCount" nullable="NULLABLE">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </parameters>
+    <parameters xmi:uuid="mmuuid:8f42e701-3609-413d-8c10-77e32cd816f2" name="max" nullable="NULLABLE">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </parameters>
+    <parameters xmi:uuid="mmuuid:4511ea3f-f2d2-4abf-b363-afb5186bc2d2" name="min" nullable="NULLABLE">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </parameters>
+  </relational:Procedure>
+  <relational:Procedure xmi:uuid="mmuuid:8db9b08e-3d6e-415a-9ceb-3fef726f424c" name="setProperty">
+    <parameters xmi:uuid="mmuuid:48034d50-dd11-4653-aeae-b0d8d3d55656" name="OldValue" direction="RETURN" length="2097152">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </parameters>
+    <parameters xmi:uuid="mmuuid:d377510e-2ec5-445e-bdf0-59c7c0380962" name="UID" length="50">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </parameters>
+    <parameters xmi:uuid="mmuuid:ea92812c-1516-4c75-b5d3-c531fdbd8475" name="Name">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </parameters>
+    <parameters xmi:uuid="mmuuid:ac5beeb8-2d0d-48ff-a533-4237d53b67e8" name="Value" length="2097152" nullable="NULLABLE">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </parameters>
+  </relational:Procedure>
+  <relational:Procedure xmi:uuid="mmuuid:9a754e95-853b-40b2-a085-56d57f45953d" name="logMsg">
+    <parameters xmi:uuid="mmuuid:3086a5d9-ae1a-4c99-a649-ad9b8d3db8da" name="logged" direction="RETURN">
+      <type href="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </parameters>
+    <parameters xmi:uuid="mmuuid:ce0fd267-0038-49d5-ab1c-d8166d556b72" name="level" defaultValue="DEBUG">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </parameters>
+    <parameters xmi:uuid="mmuuid:c3f22b88-7f80-4ae3-8e60-6953722b8c38" name="context" defaultValue="org.teiid.PROCESSOR">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </parameters>
+    <parameters xmi:uuid="mmuuid:81b921cc-9417-4655-898b-3d587ad3af16" name="msg">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#object"/>
+    </parameters>
+  </relational:Procedure>
+  <relational:Procedure xmi:uuid="mmuuid:36769e93-4cc3-417b-853e-5ee5e6653d01" name="isLoggable">
+    <parameters xmi:uuid="mmuuid:589773e4-2f8c-4972-ac0d-d694e317f154" name="loggable" direction="RETURN">
+      <type href="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </parameters>
+    <parameters xmi:uuid="mmuuid:995ab23a-3fd8-4ce0-aedd-6dcf99a65be1" name="level" defaultValue="DEBUG">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </parameters>
+    <parameters xmi:uuid="mmuuid:d62e3ceb-8e58-4c22-96b7-d76ee923e180" name="context" defaultValue="org.teiid.PROCESSOR">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </parameters>
+  </relational:Procedure>
+</xmi:XMI>

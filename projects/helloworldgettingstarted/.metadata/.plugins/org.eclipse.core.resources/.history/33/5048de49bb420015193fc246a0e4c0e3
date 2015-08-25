@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:diagram="http://www.metamatrix.com/metamodels/Diagram" xmlns:mmcore="http://www.metamatrix.com/metamodels/Core" xmlns:relational="http://www.metamatrix.com/metamodels/Relational" xmlns:transformation="http://www.metamatrix.com/metamodels/Transformation">
+  <mmcore:ModelAnnotation xmi:uuid="mmuuid:911bdc77-e321-4f2b-8a11-727a6f6a0c93" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational" modelType="VIRTUAL" ProducerName="Teiid Designer" ProducerVersion="9.0.2.Final-v20150615-1425-B1128">
+    <modelImports xmi:uuid="mmuuid:2e6a0b50-13b2-4d44-9325-b6c75b8b52b1" name="XMLSchema" modelLocation="http://www.w3.org/2001/XMLSchema" modelType="TYPE" primaryMetamodelUri="http://www.eclipse.org/xsd/2002/XSD"/>
+    <modelImports xmi:uuid="mmuuid:c9913777-f884-4ee8-9c85-860742876e4a" name="CustomerContextXMLSourceModel" modelLocation="../sources/CustomerContextXMLSourceModel.xmi" uuid="mmuuid:b765e097-6e98-4e06-9726-a019e2cc3562" modelType="PHYSICAL" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational"/>
+  </mmcore:ModelAnnotation>
+  <mmcore:AnnotationContainer xmi:uuid="mmuuid:5e7dd87f-9f5f-439c-bc94-43d3d9039b28"/>
+  <diagram:DiagramContainer xmi:uuid="mmuuid:e7e04055-ff62-4a7f-ac91-38bbd122d962"/>
+  <transformation:TransformationContainer xmi:uuid="mmuuid:6f9f42e7-0744-4f45-9a00-4947011c1b19">
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:821aafe3-2b32-400f-97ff-9424e2060e18" outputs="mmuuid/ea3b8d12-f220-4395-9088-b03f3eaf2246" target="mmuuid/ea3b8d12-f220-4395-9088-b03f3eaf2246">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:46ce3142-19c1-4b14-8415-12c642b5923b">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:1f89d20b-87be-4748-95de-312e74a899f7" selectSql="SELECT &#xa;&#x9;A.CustomerID AS CustomerID, A.Calls AS Calls, A.Sentiment AS Sentiment&#xa;FROM&#xa;&#x9;(EXEC CustomerContextXMLSourceModel.getTextFiles('CustomerHistory.xml')) AS f, XMLTABLE('/CustomerHistory/CustomerData' PASSING XMLPARSE(DOCUMENT f.file) COLUMNS CustomerID string PATH 'CustomerID/text()', Calls string PATH 'Calls/text()', Sentiment string PATH 'Sentiment/text()') AS A"/>
+        <aliases xmi:uuid="mmuuid:a7d836e5-438a-414f-a1ec-f5aa6bf97550" alias="getTextFiles">
+          <aliasedObject href="../sources/CustomerContextXMLSourceModel.xmi#mmuuid/8f060e60-4957-4f94-97ca-823b50f8ac98"/>
+        </aliases>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:7bc0c910-f7f4-4f47-b8ae-7b11c69bb754" outputs="mmuuid/e275013e-06c3-4c72-8808-12aa9e70ad77"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:1c2347fb-fa64-4f4a-95ab-a9635d26aa67" outputs="mmuuid/bb84157d-8548-49b6-b78a-ed4c26066673"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:9b0176c7-0bc7-4401-affd-6b34d9fa2af8" outputs="mmuuid/df202579-25ca-4976-b508-54b79d8bb3fa"/>
+      <inputs href="../sources/CustomerContextXMLSourceModel.xmi#mmuuid/8f060e60-4957-4f94-97ca-823b50f8ac98"/>
+    </transformationMappings>
+  </transformation:TransformationContainer>
+  <relational:BaseTable xmi:uuid="mmuuid:ea3b8d12-f220-4395-9088-b03f3eaf2246" name="CustomerContextXMLTable" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:e275013e-06c3-4c72-8808-12aa9e70ad77" name="CustomerID" nameInSource="CustomerID" length="4000" defaultValue="" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:bb84157d-8548-49b6-b78a-ed4c26066673" name="Calls" nameInSource="Calls" length="4000" defaultValue="" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:df202579-25ca-4976-b508-54b79d8bb3fa" name="Sentiment" nameInSource="Sentiment" length="4000" defaultValue="" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+  </relational:BaseTable>
+</xmi:XMI>
