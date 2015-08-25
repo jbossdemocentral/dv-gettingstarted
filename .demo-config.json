@@ -1,0 +1,19 @@
+{
+  "name":"Data Virtualization and Fuse Integration Demo",
+  "summary":"This demo shows how to use a Virtual Database (VDB) with 4 different fuse components",
+  "author":"Kenneth Peeples, Bill Kemp, Cojan van Ballegooijen",
+  "category":"dv",
+  "categories":["dv","multi","fuse"],
+  "level":"Intermediate",
+  "published":true,
+  "prerequisites":"Java VM 1.6 or 1.7, Maven",
+  "targetProduct":"JBoss Data Virtualization and JBoss Fuse",
+  "productVersion":"JBoss DV 6.1 and JBoss Fuse 6.1",
+  "technologies": ["Camel","Teiid","JBoss EAP","JBoss Fuse", "JBoss DV"],
+  "links": [ 
+    {
+      "name":"Code",
+      "url":"https://github.com/jbossdemocentral/dv-fuse-integration-demo"
+    }
+  ]
+}

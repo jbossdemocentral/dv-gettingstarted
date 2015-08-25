@@ -1,0 +1,299 @@
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3
+
+  JAVA: /Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/bin/java
+
+  JAVA_OPTS:  -server -XX:+UseCompressedOops -verbose:gc -Xloggc:"/Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/standalone/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1302m -Xmx1302m -XX:MaxPermSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -Djboss.modules.policy-permissions=true
+
+=========================================================================
+
+[0m21:23:19,326 INFO  [org.jboss.modules] (main) JBoss Modules version 1.3.5.Final-redhat-1
+[0m[0m21:23:19,505 INFO  [org.jboss.msc] (main) JBoss MSC version 1.1.5.Final-redhat-1
+[0m[0m21:23:19,570 INFO  [org.jboss.as] (MSC service thread 1-6) JBAS015899: JBoss Red Hat JBoss Data Virtualization 6.1.0 (AS 7.4.3.Final-redhat-2) starting
+[0m[33m21:23:20,477 WARN  [org.jboss.as.server.deployment.scanner] (DeploymentScanner-threads - 1) JBAS015002: Deployment of 'teiid-dashboard-builder.war' requested, but the deployment is not present
+[0m[0m21:23:20,477 INFO  [org.jboss.as.server.deployment.scanner] (DeploymentScanner-threads - 1) JBAS015003: Found integration-platform-console.war in deployment directory. To trigger deployment create a file called integration-platform-console.war.dodeploy
+[0m[0m21:23:20,805 INFO  [org.jboss.security] (Controller Boot Thread) PBOX000361: Default Security Vault Implementation Initialized and Ready
+[0m[0m21:23:20,814 INFO  [org.xnio] (MSC service thread 1-8) XNIO Version 3.0.11.GA-redhat-2
+[0m[0m21:23:20,816 INFO  [org.jboss.as.server] (Controller Boot Thread) JBAS015888: Creating http management service using socket-binding (management-http)
+[0m[0m21:23:20,818 INFO  [org.xnio.nio] (MSC service thread 1-8) XNIO NIO Implementation Version 3.0.11.GA-redhat-2
+[0m[0m21:23:20,834 INFO  [org.jboss.remoting] (MSC service thread 1-8) JBoss Remoting version 3.3.4.Final-redhat-1
+[0m[0m21:23:20,852 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 31) JBAS010280: Activating Infinispan subsystem.
+[0m[33m21:23:20,863 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 46) JBAS010153: Node identifier property is set to the default value. Please make sure it is unique.
+[0m[0m21:23:20,867 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 44) JBAS013171: Activating Security Subsystem
+[0m[0m21:23:20,869 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 37) JBAS012605: Activated the following JSF Implementations: [main, 1.2]
+[0m[0m21:23:20,877 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 39) JBAS011800: Activating Naming Subsystem
+[0m[0m21:23:20,877 INFO  [org.jboss.as.security] (MSC service thread 1-14) JBAS013170: Current PicketBox version=4.0.19.SP10-redhat-1
+[0m[0m21:23:20,914 INFO  [org.jboss.as.connector.logging] (MSC service thread 1-13) JBAS010408: Starting JCA Subsystem (IronJacamar 1.0.28.Final-redhat-1)
+[0m[0m21:23:20,921 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 48) JBAS015537: Activating WebServices Extension
+[0m[0m21:23:20,964 INFO  [org.jboss.as.naming] (MSC service thread 1-13) JBAS011802: Starting Naming Service
+[0m[0m21:23:20,964 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-3) JBAS015400: Bound mail session [java:jboss/mail/Default]
+[0m[0m21:23:21,051 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 27) JBAS010403: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+[0m[0m21:23:21,068 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 27) JBAS010404: Deploying non-JDBC-compliant driver class org.teiid.jdbc.TeiidDriver (version 8.7)
+[0m[0m21:23:21,069 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 27) JBAS010404: Deploying non-JDBC-compliant driver class org.teiid.jdbc.TeiidDriver (version 8.7)
+[0m[0m21:23:21,083 INFO  [org.modeshape.common.logging.LogFactory] (ServerService Thread Pool -- 50) SLF4J implementation located in the classpath. It will be used by ModeShape for logging.
+[0m[0m21:23:21,109 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 27) JBAS010404: Deploying non-JDBC-compliant driver class org.modeshape.jdbc.LocalJcrDriver (version 3.8)
+[0m[0m21:23:21,351 INFO  [org.apache.coyote.http11.Http11Protocol] (MSC service thread 1-4) JBWEB003001: Coyote HTTP/1.1 initializing on : http-/127.0.0.1:8080
+[0m[0m21:23:21,373 INFO  [org.apache.coyote.http11.Http11Protocol] (MSC service thread 1-4) JBWEB003000: Coyote HTTP/1.1 starting on: http-/127.0.0.1:8080
+[0m[0m21:23:21,388 INFO  [org.jboss.ws.common.management] (MSC service thread 1-13) JBWS022052: Starting JBoss Web Services - Stack CXF Server 4.3.4.Final-redhat-1
+[0m[0m21:23:21,485 INFO  [org.jboss.as.connector.deployers.RADeployer] (MSC service thread 1-15) IJ020001: Required license terms for file:/Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/modules/system/layers/dv/org/jboss/teiid/resource-adapter/salesforce/main/./
+[0m[0m21:23:21,485 INFO  [org.jboss.as.connector.deployers.RADeployer] (MSC service thread 1-2) IJ020001: Required license terms for file:/Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/modules/system/layers/dv/org/jboss/teiid/resource-adapter/file/main/./
+[0m[0m21:23:21,485 INFO  [org.jboss.as.connector.deployers.RADeployer] (MSC service thread 1-3) IJ020001: Required license terms for file:/Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/modules/system/layers/dv/org/jboss/teiid/resource-adapter/file/main/./
+[0m[0m21:23:21,485 INFO  [org.jboss.as.connector.deployers.RADeployer] (MSC service thread 1-6) IJ020001: Required license terms for file:/Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/modules/system/layers/dv/org/jboss/teiid/resource-adapter/webservice/main/./
+[0m[0m21:23:21,485 INFO  [org.jboss.as.connector.deployers.RADeployer] (MSC service thread 1-7) IJ020001: Required license terms for file:/Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/modules/system/layers/dv/org/jboss/teiid/resource-adapter/file/main/./
+[0m[0m21:23:21,485 INFO  [org.jboss.as.connector.deployers.RADeployer] (MSC service thread 1-16) IJ020001: Required license terms for file:/Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/modules/system/layers/dv/org/jboss/teiid/resource-adapter/file/main/./
+[0m[0m21:23:21,486 INFO  [org.jboss.as.connector.deployers.RADeployer] (MSC service thread 1-12) IJ020001: Required license terms for file:/Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/modules/system/layers/dv/org/jboss/teiid/resource-adapter/mongodb/main/./
+[0m[0m21:23:21,486 INFO  [org.jboss.as.connector.deployers.RADeployer] (MSC service thread 1-9) IJ020001: Required license terms for file:/Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/modules/system/layers/dv/org/jboss/teiid/resource-adapter/ldap/main/./
+[0m[0m21:23:21,487 INFO  [org.jboss.as.connector.deployers.RADeployer] (MSC service thread 1-4) IJ020001: Required license terms for file:/Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/modules/system/layers/dv/org/jboss/teiid/resource-adapter/google/main/./
+[0m[0m21:23:21,486 INFO  [org.jboss.as.connector.deployers.RADeployer] (MSC service thread 1-10) IJ020001: Required license terms for file:/Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/modules/system/layers/dv/org/jboss/teiid/resource-adapter/accumulo/main/./
+[0m[0m21:23:21,487 INFO  [org.jboss.as.connector.deployers.RADeployer] (MSC service thread 1-13) IJ020001: Required license terms for file:/Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/modules/system/layers/dv/org/jboss/teiid/resource-adapter/file/main/./
+[0m[0m21:23:21,525 INFO  [org.jboss.as.connector.deployers.RaXmlDeployer] (MSC service thread 1-12) IJ020001: Required license terms for file:/Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/modules/system/layers/dv/org/jboss/teiid/resource-adapter/file/main/./
+[0m[0m21:23:21,525 INFO  [org.jboss.as.connector.deployers.RaXmlDeployer] (MSC service thread 1-13) IJ020001: Required license terms for file:/Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/modules/system/layers/dv/org/jboss/teiid/resource-adapter/mongodb/main/./
+[0m[0m21:23:21,526 INFO  [org.jboss.as.connector.deployers.RaXmlDeployer] (MSC service thread 1-15) IJ020001: Required license terms for file:/Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/modules/system/layers/dv/org/jboss/teiid/resource-adapter/salesforce/main/./
+[0m[0m21:23:21,525 INFO  [org.jboss.as.connector.deployers.RaXmlDeployer] (MSC service thread 1-16) IJ020001: Required license terms for file:/Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/modules/system/layers/dv/org/jboss/teiid/resource-adapter/file/main/./
+[0m[0m21:23:21,525 INFO  [org.jboss.as.connector.deployers.RaXmlDeployer] (MSC service thread 1-9) IJ020001: Required license terms for file:/Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/modules/system/layers/dv/org/jboss/teiid/resource-adapter/ldap/main/./
+[0m[0m21:23:21,526 INFO  [org.jboss.as.connector.deployers.RaXmlDeployer] (MSC service thread 1-6) IJ020001: Required license terms for file:/Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/modules/system/layers/dv/org/jboss/teiid/resource-adapter/webservice/main/./
+[0m[0m21:23:21,525 INFO  [org.jboss.as.connector.deployers.RaXmlDeployer] (MSC service thread 1-10) IJ020001: Required license terms for file:/Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/modules/system/layers/dv/org/jboss/teiid/resource-adapter/accumulo/main/./
+[0m[0m21:23:21,525 INFO  [org.jboss.as.connector.deployers.RaXmlDeployer] (MSC service thread 1-7) IJ020001: Required license terms for file:/Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/modules/system/layers/dv/org/jboss/teiid/resource-adapter/file/main/./
+[0m[0m21:23:21,526 INFO  [org.jboss.as.connector.deployers.RaXmlDeployer] (MSC service thread 1-3) IJ020001: Required license terms for file:/Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/modules/system/layers/dv/org/jboss/teiid/resource-adapter/file/main/./
+[0m[0m21:23:21,526 INFO  [org.jboss.as.connector.deployers.RaXmlDeployer] (MSC service thread 1-2) IJ020001: Required license terms for file:/Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/modules/system/layers/dv/org/jboss/teiid/resource-adapter/file/main/./
+[0m[0m21:23:21,525 INFO  [org.jboss.as.connector.deployers.RaXmlDeployer] (MSC service thread 1-4) IJ020001: Required license terms for file:/Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/modules/system/layers/dv/org/jboss/teiid/resource-adapter/google/main/./
+[0m[0m21:23:21,532 INFO  [org.jboss.as.connector.deployers.RaXmlDeployer] (MSC service thread 1-15) IJ020002: Deployed: file:/Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/modules/system/layers/dv/org/jboss/teiid/resource-adapter/salesforce/main/./
+[0m[0m21:23:21,532 INFO  [org.jboss.as.connector.deployers.RaXmlDeployer] (MSC service thread 1-4) IJ020002: Deployed: file:/Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/modules/system/layers/dv/org/jboss/teiid/resource-adapter/google/main/./
+[0m[0m21:23:21,532 INFO  [org.jboss.as.connector.deployers.RaXmlDeployer] (MSC service thread 1-12) IJ020002: Deployed: file:/Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/modules/system/layers/dv/org/jboss/teiid/resource-adapter/file/main/./
+[0m[0m21:23:21,532 INFO  [org.jboss.as.connector.deployers.RaXmlDeployer] (MSC service thread 1-6) IJ020002: Deployed: file:/Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/modules/system/layers/dv/org/jboss/teiid/resource-adapter/webservice/main/./
+[0m[0m21:23:21,532 INFO  [org.jboss.as.connector.deployers.RaXmlDeployer] (MSC service thread 1-9) IJ020002: Deployed: file:/Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/modules/system/layers/dv/org/jboss/teiid/resource-adapter/ldap/main/./
+[0m[0m21:23:21,532 INFO  [org.jboss.as.connector.deployers.RaXmlDeployer] (MSC service thread 1-10) IJ020002: Deployed: file:/Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/modules/system/layers/dv/org/jboss/teiid/resource-adapter/accumulo/main/./
+[0m[0m21:23:21,535 INFO  [org.jboss.as.connector.deployers.RaXmlDeployer] (MSC service thread 1-13) IJ020002: Deployed: file:/Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/modules/system/layers/dv/org/jboss/teiid/resource-adapter/mongodb/main/./
+[0m[0m21:23:21,535 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-9) JBAS010400: Bound data source [java:jboss/datasources/ExampleDS]
+[0m[0m21:23:21,535 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-6) JBAS010400: Bound data source [java:/accounts-ds]
+[0m[0m21:23:21,535 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-15) JBAS010400: Bound data source [java:jboss/datasources/DashboardDS]
+[0m[0m21:23:21,536 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-4) JBAS010400: Bound data source [java:/datasources/ModeShapeDS]
+[0m[0m21:23:21,536 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-15) JBAS010400: Bound data source [java:/teiid-log-ds]
+[0m[0m21:23:21,539 INFO  [org.jboss.as.connector.deployment] (MSC service thread 1-2) JBAS010406: Registered connection factory java:/CustomerHistoryXMLFileSourceModel
+[0m[0m21:23:21,539 INFO  [org.jboss.as.connector.deployment] (MSC service thread 1-7) JBAS010406: Registered connection factory java:/excel-file
+[0m[0m21:23:21,539 INFO  [org.jboss.as.connector.deployment] (MSC service thread 1-16) JBAS010406: Registered connection factory java:/marketdata-file
+[0m[0m21:23:21,539 INFO  [org.jboss.as.connector.deployment] (MSC service thread 1-3) JBAS010406: Registered connection factory java:/CustomerFlatFileSourceModel
+[0m[0m21:23:21,543 INFO  [org.jboss.as.connector.deployers.RaXmlDeployer] (MSC service thread 1-7) IJ020002: Deployed: file:/Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/modules/system/layers/dv/org/jboss/teiid/resource-adapter/file/main/./
+[0m[0m21:23:21,543 INFO  [org.jboss.as.connector.deployers.RaXmlDeployer] (MSC service thread 1-3) IJ020002: Deployed: file:/Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/modules/system/layers/dv/org/jboss/teiid/resource-adapter/file/main/./
+[0m[0m21:23:21,543 INFO  [org.jboss.as.connector.deployers.RaXmlDeployer] (MSC service thread 1-16) IJ020002: Deployed: file:/Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/modules/system/layers/dv/org/jboss/teiid/resource-adapter/file/main/./
+[0m[0m21:23:21,543 INFO  [org.jboss.as.connector.deployers.RaXmlDeployer] (MSC service thread 1-2) IJ020002: Deployed: file:/Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/modules/system/layers/dv/org/jboss/teiid/resource-adapter/file/main/./
+[0m[0m21:23:21,544 INFO  [org.jboss.as.connector.deployment] (MSC service thread 1-3) JBAS010401: Bound JCA ConnectionFactory [java:/excel-file]
+[0m[0m21:23:21,544 INFO  [org.jboss.as.connector.deployment] (MSC service thread 1-12) JBAS010401: Bound JCA ConnectionFactory [java:/marketdata-file]
+[0m[0m21:23:21,544 INFO  [org.jboss.as.connector.deployment] (MSC service thread 1-10) JBAS010401: Bound JCA ConnectionFactory [java:/CustomerFlatFileSourceModel]
+[0m[0m21:23:21,544 INFO  [org.jboss.as.connector.deployment] (MSC service thread 1-13) JBAS010401: Bound JCA ConnectionFactory [java:/CustomerHistoryXMLFileSourceModel]
+[0m[0m21:23:21,946 INFO  [org.modeshape.jcr.JcrRepository] (MSC service thread 1-14) ModeShape version 3.8.2.GA-redhat-3
+[0m[0m21:23:22,225 INFO  [org.infinispan.factories.GlobalComponentRegistry] (ServerService Thread Pool -- 52) ISPN000128: Infinispan version: Infinispan 'Delirium' 5.2.10.Final
+[0m[0m21:23:22,267 INFO  [org.infinispan.factories.TransactionManagerFactory] (ServerService Thread Pool -- 52) ISPN000161: Using a batchMode transaction manager
+[0m[0m21:23:22,267 INFO  [org.infinispan.factories.TransactionManagerFactory] (ServerService Thread Pool -- 54) ISPN000161: Using a batchMode transaction manager
+[0m[0m21:23:22,267 INFO  [org.infinispan.factories.TransactionManagerFactory] (ServerService Thread Pool -- 55) ISPN000161: Using a batchMode transaction manager
+[0m[0m21:23:22,297 INFO  [org.teiid.RUNTIME] (ServerService Thread Pool -- 51) TEIID50006 Teiid translator "jdbc-simple" added.
+[0m[0m21:23:22,318 INFO  [org.teiid.RUNTIME] (ServerService Thread Pool -- 51) TEIID50006 Teiid translator "jdbc-ansi" added.
+[0m[0m21:23:22,375 INFO  [org.teiid.RUNTIME] (ServerService Thread Pool -- 51) TEIID50006 Teiid translator "access" added.
+[0m[0m21:23:22,445 INFO  [org.infinispan.jmx.CacheJmxRegistration] (ServerService Thread Pool -- 54) ISPN000031: MBeans were successfully registered to the platform MBean server.
+[0m[0m21:23:22,445 INFO  [org.infinispan.jmx.CacheJmxRegistration] (ServerService Thread Pool -- 55) ISPN000031: MBeans were successfully registered to the platform MBean server.
+[0m[0m21:23:22,445 INFO  [org.infinispan.jmx.CacheJmxRegistration] (ServerService Thread Pool -- 52) ISPN000031: MBeans were successfully registered to the platform MBean server.
+[0m[0m21:23:22,448 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 54) JBAS010281: Started resultset-repl cache from teiid-cache container
+[0m[0m21:23:22,448 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 55) JBAS010281: Started resultset cache from teiid-cache container
+[0m[0m21:23:22,448 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 52) JBAS010281: Started preparedplan cache from teiid-cache container
+[0m[0m21:23:22,471 INFO  [org.teiid.RUNTIME] (ServerService Thread Pool -- 51) TEIID50006 Teiid translator "db2" added.
+[0m[0m21:23:22,488 INFO  [org.teiid.RUNTIME] (MSC service thread 1-6) TEIID50001 Teiid Engine 8.7.1.redhat-8 Started = Mon Jun 15 21:23:22 CEST 2015
+[0m[0m21:23:22,502 INFO  [org.teiid.RUNTIME] (MSC service thread 1-6) TEIID50038 Teiid Embedded transport enabled. Bound to: teiid/queryengine/embedded
+[0m[0m21:23:22,502 INFO  [org.teiid.RUNTIME] (MSC service thread 1-15) TEIID50038 Teiid Embedded transport enabled. Bound to: teiid/queryengine/odata
+[0m[0m21:23:22,556 INFO  [org.teiid.RUNTIME] (MSC service thread 1-7) TEIID50012 Teiid JDBC - Name = jdbc, Host = localhost,  Port = 31000, SSL = OFF, security-domains = teiid-security
+[0m[0m21:23:22,556 INFO  [org.teiid.RUNTIME] (MSC service thread 1-8) TEIID50037 Teiid ODBC - Name = odbc, Host = localhost,  Port = 35432, SSL = OFF, security-domains = teiid-security
+[0m[0m21:23:22,572 INFO  [org.teiid.RUNTIME] (ServerService Thread Pool -- 51) TEIID50006 Teiid translator "derby" added.
+[0m[0m21:23:22,692 INFO  [org.teiid.RUNTIME] (ServerService Thread Pool -- 51) TEIID50006 Teiid translator "h2" added.
+[0m[0m21:23:22,820 INFO  [org.teiid.RUNTIME] (ServerService Thread Pool -- 51) TEIID50006 Teiid translator "hsql" added.
+[0m[0m21:23:22,967 INFO  [org.teiid.RUNTIME] (ServerService Thread Pool -- 51) TEIID50006 Teiid translator "informix" added.
+[0m[0m21:23:23,178 INFO  [org.teiid.RUNTIME] (ServerService Thread Pool -- 51) TEIID50006 Teiid translator "metamatrix" added.
+[0m[0m21:23:23,296 INFO  [org.teiid.RUNTIME] (ServerService Thread Pool -- 51) TEIID50006 Teiid translator "mysql" added.
+[0m[0m21:23:23,412 INFO  [org.teiid.RUNTIME] (ServerService Thread Pool -- 51) TEIID50006 Teiid translator "mysql5" added.
+[0m[0m21:23:23,576 INFO  [org.teiid.RUNTIME] (ServerService Thread Pool -- 51) TEIID50006 Teiid translator "oracle" added.
+[0m[0m21:23:23,705 INFO  [org.teiid.RUNTIME] (ServerService Thread Pool -- 51) TEIID50006 Teiid translator "postgresql" added.
+[0m[0m21:23:23,770 INFO  [org.teiid.RUNTIME] (ServerService Thread Pool -- 51) TEIID50006 Teiid translator "sqlserver" added.
+[0m[0m21:23:23,824 INFO  [org.teiid.RUNTIME] (ServerService Thread Pool -- 51) TEIID50006 Teiid translator "sybase" added.
+[0m[0m21:23:24,011 INFO  [org.teiid.RUNTIME] (ServerService Thread Pool -- 51) TEIID50006 Teiid translator "teiid" added.
+[0m[0m21:23:24,073 INFO  [org.teiid.RUNTIME] (ServerService Thread Pool -- 51) TEIID50006 Teiid translator "teradata" added.
+[0m[0m21:23:24,107 INFO  [org.teiid.RUNTIME] (ServerService Thread Pool -- 51) TEIID50006 Teiid translator "modeshape" added.
+[0m[0m21:23:24,129 INFO  [org.teiid.RUNTIME] (ServerService Thread Pool -- 51) TEIID50006 Teiid translator "ingres" added.
+[0m[0m21:23:24,160 INFO  [org.teiid.RUNTIME] (ServerService Thread Pool -- 51) TEIID50006 Teiid translator "ingres93" added.
+[0m[0m21:23:24,183 INFO  [org.teiid.RUNTIME] (ServerService Thread Pool -- 51) TEIID50006 Teiid translator "intersystems-cache" added.
+[0m[0m21:23:24,212 INFO  [org.teiid.RUNTIME] (ServerService Thread Pool -- 51) TEIID50006 Teiid translator "netezza" added.
+[0m[0m21:23:24,216 INFO  [org.teiid.RUNTIME] (ServerService Thread Pool -- 51) TEIID50006 Teiid translator "file" added.
+[0m[0m21:23:24,220 INFO  [org.teiid.RUNTIME] (ServerService Thread Pool -- 51) TEIID50006 Teiid translator "ldap" added.
+[0m[0m21:23:24,225 INFO  [org.teiid.RUNTIME] (ServerService Thread Pool -- 51) TEIID50006 Teiid translator "loopback" added.
+[0m[0m21:23:24,229 INFO  [org.teiid.RUNTIME] (ServerService Thread Pool -- 51) TEIID50006 Teiid translator "olap" added.
+[0m[0m21:23:24,237 INFO  [org.teiid.RUNTIME] (ServerService Thread Pool -- 51) TEIID50006 Teiid translator "ws" added.
+[0m[0m21:23:24,245 INFO  [org.teiid.RUNTIME] (ServerService Thread Pool -- 51) TEIID50006 Teiid translator "salesforce" added.
+[0m[0m21:23:24,258 INFO  [org.teiid.RUNTIME] (ServerService Thread Pool -- 51) TEIID50006 Teiid translator "hive" added.
+[0m[0m21:23:24,263 INFO  [org.teiid.RUNTIME] (ServerService Thread Pool -- 51) TEIID50006 Teiid translator "google-spreadsheet" added.
+[0m[0m21:23:24,274 INFO  [org.teiid.RUNTIME] (ServerService Thread Pool -- 51) TEIID50006 Teiid translator "odata" added.
+[0m[0m21:23:24,280 INFO  [org.teiid.RUNTIME] (ServerService Thread Pool -- 51) TEIID50006 Teiid translator "sap-nw-gateway" added.
+[0m[0m21:23:24,291 INFO  [org.teiid.RUNTIME] (ServerService Thread Pool -- 51) TEIID50006 Teiid translator "mongodb" added.
+[0m[0m21:23:24,306 INFO  [org.teiid.RUNTIME] (ServerService Thread Pool -- 51) TEIID50006 Teiid translator "cassandra" added.
+[0m[0m21:23:24,315 INFO  [org.teiid.RUNTIME] (ServerService Thread Pool -- 51) TEIID50006 Teiid translator "accumulo" added.
+[0m[0m21:23:24,322 INFO  [org.teiid.RUNTIME] (ServerService Thread Pool -- 51) TEIID50006 Teiid translator "solr" added.
+[0m[0m21:23:24,336 INFO  [org.teiid.RUNTIME] (ServerService Thread Pool -- 51) TEIID50006 Teiid translator "excel" added.
+[0m[0m21:23:24,343 INFO  [org.teiid.RUNTIME] (ServerService Thread Pool -- 51) TEIID50006 Teiid translator "impala" added.
+[0m[0m21:23:24,364 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-6) JBAS015876: Starting deployment of "modeshape-cmis.war" (runtime-name: "modeshape-cmis.war")
+[0m[0m21:23:24,364 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) JBAS015876: Starting deployment of "database-service.jar" (runtime-name: "database-service.jar")
+[0m[0m21:23:24,364 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-5) JBAS015876: Starting deployment of "modeshape-rest.war" (runtime-name: "modeshape-rest.war")
+[0m[0m21:23:24,364 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-14) JBAS015876: Starting deployment of "modeshape-webdav.war" (runtime-name: "modeshape-webdav.war")
+[0m[0m21:23:24,364 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) JBAS015876: Starting deployment of "CustomerContextVDB.vdb" (runtime-name: "CustomerContextVDB.vdb")
+[0m[0m21:23:24,365 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-8) JBAS015876: Starting deployment of "integration-platform-console.war" (runtime-name: "integration-platform-console.war")
+[0m[0m21:23:24,365 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) JBAS015876: Starting deployment of "ModeShape.vdb" (runtime-name: "ModeShape.vdb")
+[0m[0m21:23:24,365 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-7) JBAS015876: Starting deployment of "teiid-dashboard-builder.war" (runtime-name: "teiid-dashboard-builder.war")
+[0m[0m21:23:24,365 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015876: Starting deployment of "teiid-odata-8.7.1.redhat-8.war" (runtime-name: "teiid-odata-8.7.1.redhat-8.war")
+[0m[0m21:23:24,383 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-10) JBAS015012: Started FileSystemDeploymentService for directory /Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/standalone/deployments
+[0m[0m21:23:24,387 INFO  [org.jboss.as.remoting] (MSC service thread 1-13) JBAS017100: Listening on 127.0.0.1:9999
+[0m[0m21:23:24,387 INFO  [org.jboss.as.remoting] (MSC service thread 1-11) JBAS017100: Listening on 127.0.0.1:4447
+[0m[33m21:23:24,500 WARN  [org.jboss.as.dependency.unsupported] (MSC service thread 1-10) JBAS018568: Deployment "deployment.teiid-odata-8.7.1.redhat-8.war" is using an unsupported module ("org.joda.time:main") which may be changed or removed in future versions without notice.
+[0m[0m21:23:24,674 INFO  [org.jboss.as.jpa] (MSC service thread 1-3) JBAS011401: Read persistence.xml for teiid-logger
+[0m[0m21:23:24,731 INFO  [org.jboss.web] (ServerService Thread Pool -- 54) JBAS018210: Register web context: /odata
+[0m[0m21:23:24,731 INFO  [org.jboss.web] (ServerService Thread Pool -- 58) JBAS018210: Register web context: 
+[0m[0m21:23:24,731 INFO  [org.jboss.web] (ServerService Thread Pool -- 52) JBAS018210: Register web context: /modeshape-webdav
+[0m[0m21:23:24,731 INFO  [org.jboss.web] (ServerService Thread Pool -- 60) JBAS018210: Register web context: /modeshape-rest
+[0m[31m21:23:24,743 ERROR [stderr] (MSC service thread 1-10) ScriptEngineManager providers.next(): javax.script.ScriptEngineFactory: Provider apple.applescript.AppleScriptEngineFactory not found
+[0m[31m21:23:24,743 ERROR [stderr] (MSC service thread 1-16) ScriptEngineManager providers.next(): javax.script.ScriptEngineFactory: Provider apple.applescript.AppleScriptEngineFactory not found
+[0m[0m21:23:24,759 INFO  [org.jboss.weld.deployer] (MSC service thread 1-14) JBAS016002: Processing weld deployment database-service.jar
+[0m[0m21:23:24,776 INFO  [org.jboss.as.ejb3.deployment.processors.EjbJndiBindingsDeploymentUnitProcessor] (MSC service thread 1-14) JNDI bindings for session bean named teiid-database-service in deployment unit deployment "database-service.jar" are as follows:
+
+	java:global/database-service/teiid-database-service!org.teiid.service.DatabaseServiceLocal
+	java:app/database-service/teiid-database-service!org.teiid.service.DatabaseServiceLocal
+	java:module/teiid-database-service!org.teiid.service.DatabaseServiceLocal
+	java:global/database-service/teiid-database-service
+	java:app/database-service/teiid-database-service
+	java:module/teiid-database-service
+
+[0m[0m21:23:24,868 INFO  [org.jboss.weld.deployer] (MSC service thread 1-14) JBAS016005: Starting Services for CDI deployment: database-service.jar
+[0m[0m21:23:24,910 INFO  [org.teiid.RUNTIME] (MSC service thread 1-2) TEIID50029 VDB ModeShape.1 model "ModeShape" metadata is currently being loaded. Start Time: 6/15/15 9:23 PM
+[0m[0m21:23:24,912 INFO  [org.teiid.RUNTIME] (MSC service thread 1-2) TEIID50029 VDB ModeShape.1 model "VDB_Lineage" metadata is currently being loaded. Start Time: 6/15/15 9:23 PM
+[0m[0m21:23:24,913 INFO  [org.teiid.RUNTIME] (MSC service thread 1-2) TEIID50029 VDB ModeShape.1 model "Relational_Model_View" metadata is currently being loaded. Start Time: 6/15/15 9:23 PM
+[0m[0m21:23:24,913 INFO  [org.teiid.RUNTIME] (MSC service thread 1-11) TEIID50029 VDB CustomerContextVDB.1 model "CustomerFlatFileSourceModel" metadata is currently being loaded. Start Time: 6/15/15 9:23 PM
+[0m[0m21:23:24,914 INFO  [org.teiid.RUNTIME] (MSC service thread 1-11) TEIID50029 VDB CustomerContextVDB.1 model "CustomerHistoryXMLViewModel" metadata is currently being loaded. Start Time: 6/15/15 9:23 PM
+[0m[0m21:23:24,915 INFO  [org.teiid.RUNTIME] (MSC service thread 1-11) TEIID50029 VDB CustomerContextVDB.1 model "CustomerContextView" metadata is currently being loaded. Start Time: 6/15/15 9:23 PM
+[0m[0m21:23:24,915 INFO  [org.teiid.RUNTIME] (MSC service thread 1-11) TEIID50029 VDB CustomerContextVDB.1 model "CustomerHistoryXMLFileSourceModel" metadata is currently being loaded. Start Time: 6/15/15 9:23 PM
+[0m[0m21:23:24,916 INFO  [org.teiid.RUNTIME] (MSC service thread 1-11) TEIID50029 VDB CustomerContextVDB.1 model "CustomerTextFileViewModel" metadata is currently being loaded. Start Time: 6/15/15 9:23 PM
+[0m[0m21:23:24,927 INFO  [org.hibernate.validator.internal.util.Version] (ServerService Thread Pool -- 60) HV000001: Hibernate Validator 4.3.2.Final-redhat-1
+[0m[0m21:23:24,990 INFO  [org.jboss.weld.Version] (MSC service thread 1-14) WELD-000900 1.1.28 (redhat)
+[0m[0m21:23:25,005 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 52) JBAS011402: Starting Persistence Unit Service 'database-service.jar#teiid-logger'
+[0m[0m21:23:25,005 INFO  [org.jboss.weld.deployer] (MSC service thread 1-11) JBAS016008: Starting weld service for deployment database-service.jar
+[0m[0m21:23:25,139 INFO  [org.jboss.resteasy.spi.ResteasyDeployment] (ServerService Thread Pool -- 54) Deploying javax.ws.rs.core.Application: class org.teiid.odata.TeiidODataApplication
+[0m[0m21:23:25,147 INFO  [org.jboss.resteasy.spi.ResteasyDeployment] (ServerService Thread Pool -- 60) Deploying javax.ws.rs.core.Application: class org.modeshape.web.jcr.rest.JcrApplication
+[0m[0m21:23:25,228 INFO  [org.hibernate.annotations.common.Version] (ServerService Thread Pool -- 52) HCANN000001: Hibernate Commons Annotations {4.0.1.Final-redhat-2}
+[0m[0m21:23:25,237 INFO  [org.hibernate.Version] (ServerService Thread Pool -- 52) HHH000412: Hibernate Core {4.2.17.SP1-redhat-1}
+[0m[0m21:23:25,239 INFO  [org.hibernate.cfg.Environment] (ServerService Thread Pool -- 52) HHH000206: hibernate.properties not found
+[0m[0m21:23:25,240 INFO  [org.hibernate.cfg.Environment] (ServerService Thread Pool -- 52) HHH000021: Bytecode provider name : javassist
+[0m[0m21:23:25,315 INFO  [org.hibernate.ejb.Ejb3Configuration] (ServerService Thread Pool -- 52) HHH000204: Processing PersistenceUnitInfo [
+	name: teiid-logger
+	...]
+[0m[0m21:23:25,441 INFO  [org.teiid.RUNTIME] (teiid-async-threads - 3) TEIID40003 VDB CustomerContextVDB.1 is set to ACTIVE
+[0m[0m21:23:25,526 INFO  [org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator] (ServerService Thread Pool -- 52) HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+[0m[33m21:23:26,161 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-5) JBAS015960: Class Path entry jaxws-api.jar in /content/modeshape-cmis.war/WEB-INF/lib/jaxws-rt-2.1.7.jar  does not point to a valid jar for a Class-Path reference.
+[0m[33m21:23:26,161 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-5) JBAS015960: Class Path entry jsr181-api.jar in /content/modeshape-cmis.war/WEB-INF/lib/jaxws-rt-2.1.7.jar  does not point to a valid jar for a Class-Path reference.
+[0m[33m21:23:26,161 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-5) JBAS015960: Class Path entry jsr250-api.jar in /content/modeshape-cmis.war/WEB-INF/lib/jaxws-rt-2.1.7.jar  does not point to a valid jar for a Class-Path reference.
+[0m[33m21:23:26,161 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-5) JBAS015960: Class Path entry saaj-api.jar in /content/modeshape-cmis.war/WEB-INF/lib/jaxws-rt-2.1.7.jar  does not point to a valid jar for a Class-Path reference.
+[0m[33m21:23:26,162 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-5) JBAS015960: Class Path entry saaj-impl.jar in /content/modeshape-cmis.war/WEB-INF/lib/jaxws-rt-2.1.7.jar  does not point to a valid jar for a Class-Path reference.
+[0m[33m21:23:26,162 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-5) JBAS015960: Class Path entry jsr173_api.jar in /content/modeshape-cmis.war/WEB-INF/lib/jaxws-rt-2.1.7.jar  does not point to a valid jar for a Class-Path reference.
+[0m[33m21:23:26,162 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-5) JBAS015960: Class Path entry sjsxp.jar in /content/modeshape-cmis.war/WEB-INF/lib/jaxws-rt-2.1.7.jar  does not point to a valid jar for a Class-Path reference.
+[0m[33m21:23:26,163 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-5) JBAS015960: Class Path entry woodstox.jar in /content/modeshape-cmis.war/WEB-INF/lib/jaxws-rt-2.1.7.jar  does not point to a valid jar for a Class-Path reference.
+[0m[33m21:23:26,163 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-5) JBAS015960: Class Path entry resolver.jar in /content/modeshape-cmis.war/WEB-INF/lib/jaxws-rt-2.1.7.jar  does not point to a valid jar for a Class-Path reference.
+[0m[33m21:23:26,163 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-5) JBAS015960: Class Path entry jaxb-api.jar in /content/modeshape-cmis.war/WEB-INF/lib/jaxws-rt-2.1.7.jar  does not point to a valid jar for a Class-Path reference.
+[0m[33m21:23:26,163 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-5) JBAS015960: Class Path entry jaxb-impl.jar in /content/modeshape-cmis.war/WEB-INF/lib/jaxws-rt-2.1.7.jar  does not point to a valid jar for a Class-Path reference.
+[0m[33m21:23:26,164 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-5) JBAS015960: Class Path entry activation.jar in /content/modeshape-cmis.war/WEB-INF/lib/jaxws-rt-2.1.7.jar  does not point to a valid jar for a Class-Path reference.
+[0m[33m21:23:26,164 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-5) JBAS015960: Class Path entry stax-ex.jar in /content/modeshape-cmis.war/WEB-INF/lib/jaxws-rt-2.1.7.jar  does not point to a valid jar for a Class-Path reference.
+[0m[33m21:23:26,164 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-5) JBAS015960: Class Path entry streambuffer.jar in /content/modeshape-cmis.war/WEB-INF/lib/jaxws-rt-2.1.7.jar  does not point to a valid jar for a Class-Path reference.
+[0m[33m21:23:26,164 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-5) JBAS015960: Class Path entry stax-utils.jar in /content/modeshape-cmis.war/WEB-INF/lib/jaxws-rt-2.1.7.jar  does not point to a valid jar for a Class-Path reference.
+[0m[33m21:23:26,385 WARN  [org.jboss.as.dependency.private] (MSC service thread 1-4) JBAS018567: Deployment "deployment.modeshape-cmis.war" is using a private module ("com.sun.xml.messaging.saaj:main") which may be changed or removed in future versions without notice.
+[0m[33m21:23:26,385 WARN  [org.jboss.as.dependency.private] (MSC service thread 1-4) JBAS018567: Deployment "deployment.modeshape-cmis.war" is using a private module ("com.sun.xml.messaging.saaj:main") which may be changed or removed in future versions without notice.
+[0m[0m21:23:26,422 INFO  [org.jboss.web] (ServerService Thread Pool -- 61) JBAS018210: Register web context: /modeshape-cmis
+[0m[0m21:23:26,484 INFO  [org.apache.chemistry.opencmis.jcr.JcrTypeManager] (ServerService Thread Pool -- 61) Added type 'cmis:folder'.
+[0m[0m21:23:26,489 INFO  [org.apache.chemistry.opencmis.jcr.JcrTypeManager] (ServerService Thread Pool -- 61) Added type 'cmis:document'.
+[0m[0m21:23:26,491 INFO  [org.apache.chemistry.opencmis.jcr.JcrTypeManager] (ServerService Thread Pool -- 61) Added type 'cmis:unversioned-document'.
+[0m[0m21:23:26,500 INFO  [stdout] (ServerService Thread Pool -- 61) --- loaded repository dv
+[0m[0m21:23:26,507 INFO  [javax.enterprise.resource.webservices.jaxws.server.http] (ServerService Thread Pool -- 61) WSSERVLET12: JAX-WS context listener initializing
+[0m[0m21:23:27,087 INFO  [org.teiid.RUNTIME] (teiid-async-threads - 1) TEIID40003 VDB ModeShape.1 is set to ACTIVE
+[0m[33m21:23:27,264 WARN  [org.jboss.as.dependency.unsupported] (MSC service thread 1-13) JBAS018568: Deployment "deployment.teiid-dashboard-builder.war" is using an unsupported module ("org.dom4j:main") which may be changed or removed in future versions without notice.
+[0m[33m21:23:27,264 WARN  [org.jboss.as.dependency.unsupported] (MSC service thread 1-13) JBAS018568: Deployment "deployment.teiid-dashboard-builder.war" is using an unsupported module ("org.dom4j:main") which may be changed or removed in future versions without notice.
+[0m[33m21:23:27,264 WARN  [org.jboss.as.dependency.unsupported] (MSC service thread 1-13) JBAS018568: Deployment "deployment.teiid-dashboard-builder.war" is using an unsupported module ("org.jdom:main") which may be changed or removed in future versions without notice.
+[0m[33m21:23:27,265 WARN  [org.jboss.as.dependency.unsupported] (MSC service thread 1-13) JBAS018568: Deployment "deployment.teiid-dashboard-builder.war" is using an unsupported module ("org.jdom:main") which may be changed or removed in future versions without notice.
+[0m[33m21:23:27,265 WARN  [org.jboss.as.dependency.private] (MSC service thread 1-13) JBAS018567: Deployment "deployment.teiid-dashboard-builder.war" is using a private module ("org.apache.commons.lang:main") which may be changed or removed in future versions without notice.
+[0m[33m21:23:27,265 WARN  [org.jboss.as.dependency.private] (MSC service thread 1-13) JBAS018567: Deployment "deployment.teiid-dashboard-builder.war" is using a private module ("org.apache.commons.lang:main") which may be changed or removed in future versions without notice.
+[0m[33m21:23:27,265 WARN  [org.jboss.as.dependency.private] (MSC service thread 1-13) JBAS018567: Deployment "deployment.teiid-dashboard-builder.war" is using a private module ("org.apache.commons.io:main") which may be changed or removed in future versions without notice.
+[0m[33m21:23:27,265 WARN  [org.jboss.as.dependency.private] (MSC service thread 1-13) JBAS018567: Deployment "deployment.teiid-dashboard-builder.war" is using a private module ("org.apache.commons.io:main") which may be changed or removed in future versions without notice.
+[0m[33m21:23:27,265 WARN  [org.jboss.as.dependency.private] (MSC service thread 1-13) JBAS018567: Deployment "deployment.teiid-dashboard-builder.war" is using a private module ("org.apache.commons.collections:main") which may be changed or removed in future versions without notice.
+[0m[33m21:23:27,266 WARN  [org.jboss.as.dependency.private] (MSC service thread 1-13) JBAS018567: Deployment "deployment.teiid-dashboard-builder.war" is using a private module ("org.apache.commons.collections:main") which may be changed or removed in future versions without notice.
+[0m[33m21:23:27,266 WARN  [org.jboss.as.dependency.private] (MSC service thread 1-13) JBAS018567: Deployment "deployment.teiid-dashboard-builder.war" is using a private module ("org.apache.commons.codec:main") which may be changed or removed in future versions without notice.
+[0m[33m21:23:27,266 WARN  [org.jboss.as.dependency.private] (MSC service thread 1-13) JBAS018567: Deployment "deployment.teiid-dashboard-builder.war" is using a private module ("org.apache.commons.codec:main") which may be changed or removed in future versions without notice.
+[0m[33m21:23:27,266 WARN  [org.jboss.as.dependency.private] (MSC service thread 1-13) JBAS018567: Deployment "deployment.teiid-dashboard-builder.war" is using a private module ("org.jboss.ironjacamar.jdbcadapters:main") which may be changed or removed in future versions without notice.
+[0m[33m21:23:27,266 WARN  [org.jboss.as.dependency.private] (MSC service thread 1-13) JBAS018567: Deployment "deployment.teiid-dashboard-builder.war" is using a private module ("org.jboss.ironjacamar.jdbcadapters:main") which may be changed or removed in future versions without notice.
+[0m[0m21:23:27,321 INFO  [org.jboss.weld.deployer] (MSC service thread 1-7) JBAS016002: Processing weld deployment teiid-dashboard-builder.war
+[0m[0m21:23:27,363 INFO  [org.jboss.weld.deployer] (MSC service thread 1-6) JBAS016005: Starting Services for CDI deployment: teiid-dashboard-builder.war
+[0m[0m21:23:27,371 INFO  [org.jboss.weld.deployer] (MSC service thread 1-14) JBAS016008: Starting weld service for deployment teiid-dashboard-builder.war
+[0m[0m21:23:27,839 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 52) HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[0m[33m21:23:27,842 WARN  [org.hibernate.dialect.H2Dialect] (ServerService Thread Pool -- 52) HHH000431: Unable to determine H2 database version, certain features may not work
+[0m[0m21:23:27,939 INFO  [org.hibernate.engine.transaction.internal.TransactionFactoryInitiator] (ServerService Thread Pool -- 52) HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jta.CMTTransactionFactory
+[0m[0m21:23:27,943 INFO  [org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory] (ServerService Thread Pool -- 52) HHH000397: Using ASTQueryTranslatorFactory
+[0m[0m21:23:28,325 INFO  [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 52) HHH000227: Running hbm2ddl schema export
+[0m[0m21:23:28,347 INFO  [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 52) HHH000230: Schema export complete
+[0m[0m21:23:30,771 INFO  [org.jboss.web] (ServerService Thread Pool -- 65) JBAS018210: Register web context: /dashboard
+[0m[0m21:23:30,787 INFO  [org.jboss.dashboard.ui.controller.ControllerServlet] (ServerService Thread Pool -- 65) Application Directory: /Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/dataVirtualization/teiid-dashboard/teiid-dashboard-builder.war/.
+[0m[0m21:23:30,788 INFO  [org.jboss.dashboard.ui.controller.ControllerServlet] (ServerService Thread Pool -- 65) Application Config Directory: /Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/dataVirtualization/teiid-dashboard/teiid-dashboard-builder.war/./WEB-INF/etc
+[0m[0m21:23:30,826 INFO  [org.jboss.dashboard.factory.Factory] (ServerService Thread Pool -- 65) Configuring Factory from directory: /Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/dataVirtualization/teiid-dashboard/teiid-dashboard-builder.war/./WEB-INF/etc/factory
+[0m[0m21:23:30,877 INFO  [org.jboss.dashboard.factory.Factory] (ServerService Thread Pool -- 65) Factory configured.
+[0m[0m21:23:31,096 INFO  [org.hibernate.cfg.Configuration] (ServerService Thread Pool -- 65) HHH000042: Configuring from file: hibernate.cfg.xml
+[0m[0m21:23:31,113 INFO  [org.hibernate.cfg.Configuration] (ServerService Thread Pool -- 65) HHH000041: Configured SessionFactory: null
+[0m[0m21:23:31,212 INFO  [javax.enterprise.resource.webservices.jaxws.servlet.http] (ServerService Thread Pool -- 61) WSSERVLET14: JAX-WS servlet initializing
+[0m[0m21:23:33,536 INFO  [org.jboss.dashboard.database.hibernate.HibernateInitializer] (ServerService Thread Pool -- 65) The underlying database is: h2
+[0m[0m21:23:34,375 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 65) HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[0m[33m21:23:34,376 WARN  [org.hibernate.dialect.H2Dialect] (ServerService Thread Pool -- 65) HHH000431: Unable to determine H2 database version, certain features may not work
+[0m[0m21:23:34,410 INFO  [org.hibernate.engine.transaction.internal.TransactionFactoryInitiator] (ServerService Thread Pool -- 65) HHH000399: Using default transaction strategy (direct JDBC transactions)
+[0m[0m21:23:34,411 INFO  [org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory] (ServerService Thread Pool -- 65) HHH000397: Using ASTQueryTranslatorFactory
+[0m[0m21:23:35,351 INFO  [org.jboss.dashboard.workspace.PanelsProvidersManagerImpl] (ServerService Thread Pool -- 65) Loading panels. Scanning dir: /Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/dataVirtualization/teiid-dashboard/teiid-dashboard-builder.war/WEB-INF/etc/panels
+[0m[0m21:23:35,352 INFO  [org.jboss.dashboard.workspace.PanelsProvidersManagerImpl] (ServerService Thread Pool -- 65) Reading file: /Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/dataVirtualization/teiid-dashboard/teiid-dashboard-builder.war/./WEB-INF/etc/panels/dashboard/dashboardFilter/dashb_filter.panel
+[0m[0m21:23:35,383 INFO  [org.jboss.dashboard.workspace.PanelsProvidersManagerImpl] (ServerService Thread Pool -- 65) Reading file: /Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/dataVirtualization/teiid-dashboard/teiid-dashboard-builder.war/./WEB-INF/etc/panels/dashboard/dataProviderManager/dashb_providermgr.panel
+[0m[0m21:23:35,385 INFO  [org.jboss.dashboard.workspace.PanelsProvidersManagerImpl] (ServerService Thread Pool -- 65) Reading file: /Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/dataVirtualization/teiid-dashboard/teiid-dashboard-builder.war/./WEB-INF/etc/panels/dashboard/htmlEditor/dashb_html_editor.panel
+[0m[0m21:23:35,386 INFO  [org.jboss.dashboard.workspace.PanelsProvidersManagerImpl] (ServerService Thread Pool -- 65) Reading file: /Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/dataVirtualization/teiid-dashboard/teiid-dashboard-builder.war/./WEB-INF/etc/panels/dashboard/kpi/dashb_kpi.panel
+[0m[0m21:23:35,388 INFO  [org.jboss.dashboard.workspace.PanelsProvidersManagerImpl] (ServerService Thread Pool -- 65) Reading file: /Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/dataVirtualization/teiid-dashboard/teiid-dashboard-builder.war/./WEB-INF/etc/panels/navigation/breadCrumb/breadCrumb.panel
+[0m[0m21:23:35,390 INFO  [org.jboss.dashboard.workspace.PanelsProvidersManagerImpl] (ServerService Thread Pool -- 65) Reading file: /Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/dataVirtualization/teiid-dashboard/teiid-dashboard-builder.war/./WEB-INF/etc/panels/navigation/logout/logout.panel
+[0m[0m21:23:35,391 INFO  [org.jboss.dashboard.workspace.PanelsProvidersManagerImpl] (ServerService Thread Pool -- 65) Reading file: /Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/dataVirtualization/teiid-dashboard/teiid-dashboard-builder.war/./WEB-INF/etc/panels/navigation/navigator_language_horiz.panel
+[0m[0m21:23:35,392 INFO  [org.jboss.dashboard.workspace.PanelsProvidersManagerImpl] (ServerService Thread Pool -- 65) Reading file: /Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/dataVirtualization/teiid-dashboard/teiid-dashboard-builder.war/./WEB-INF/etc/panels/navigation/navigator_sections.panel
+[0m[0m21:23:35,393 INFO  [org.jboss.dashboard.workspace.PanelsProvidersManagerImpl] (ServerService Thread Pool -- 65) Reading file: /Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/dataVirtualization/teiid-dashboard/teiid-dashboard-builder.war/./WEB-INF/etc/panels/navigation/navigator_sections_horiz.panel
+[0m[0m21:23:35,394 INFO  [org.jboss.dashboard.workspace.PanelsProvidersManagerImpl] (ServerService Thread Pool -- 65) Reading file: /Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/dataVirtualization/teiid-dashboard/teiid-dashboard-builder.war/./WEB-INF/etc/panels/navigation/navigator_sections_vert.panel
+[0m[0m21:23:35,396 INFO  [org.jboss.dashboard.workspace.PanelsProvidersManagerImpl] (ServerService Thread Pool -- 65) Reading file: /Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/dataVirtualization/teiid-dashboard/teiid-dashboard-builder.war/./WEB-INF/etc/panels/navigation/navigator_workspace.panel
+[0m[0m21:23:35,396 INFO  [org.jboss.dashboard.workspace.PanelsProvidersManagerImpl] (ServerService Thread Pool -- 65) Reading file: /Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/dataVirtualization/teiid-dashboard/teiid-dashboard-builder.war/./WEB-INF/etc/panels/navigation/navigator_workspace_horiz.panel
+[0m[0m21:23:35,397 INFO  [org.jboss.dashboard.workspace.PanelsProvidersManagerImpl] (ServerService Thread Pool -- 65) Reading file: /Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/dataVirtualization/teiid-dashboard/teiid-dashboard-builder.war/./WEB-INF/etc/panels/navigation/navigator_workspace_vert.panel
+[0m[0m21:23:35,398 INFO  [org.jboss.dashboard.workspace.PanelsProvidersManagerImpl] (ServerService Thread Pool -- 65) Reading file: /Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/dataVirtualization/teiid-dashboard/teiid-dashboard-builder.war/./WEB-INF/etc/panels/navigation/tree/treeMenu.panel
+[0m[0m21:23:35,400 INFO  [org.jboss.dashboard.workspace.PanelsProvidersManagerImpl] (ServerService Thread Pool -- 65) Reading file: /Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/dataVirtualization/teiid-dashboard/teiid-dashboard-builder.war/./WEB-INF/etc/panels/system/dashboardExport/dashb_export.panel
+[0m[0m21:23:35,401 INFO  [org.jboss.dashboard.workspace.PanelsProvidersManagerImpl] (ServerService Thread Pool -- 65) Reading file: /Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/dataVirtualization/teiid-dashboard/teiid-dashboard-builder.war/./WEB-INF/etc/panels/system/dashboardImport/dashb_import.panel
+[0m[0m21:23:35,403 INFO  [org.jboss.dashboard.workspace.PanelsProvidersManagerImpl] (ServerService Thread Pool -- 65) Reading file: /Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/dataVirtualization/teiid-dashboard/teiid-dashboard-builder.war/./WEB-INF/etc/panels/system/dataSourceManagement/DataSourceManager.panel
+[0m[0m21:23:35,404 INFO  [org.jboss.dashboard.workspace.PanelsProvidersManagerImpl] (ServerService Thread Pool -- 65) Reading file: /Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/dataVirtualization/teiid-dashboard/teiid-dashboard-builder.war/./WEB-INF/etc/panels/system/workspaceExport/workspaceImportexport.panel
+[0m[0m21:23:35,564 INFO  [org.jboss.dashboard.workspace.GraphicElementManagerImpl] (ServerService Thread Pool -- 65) Starting org.jboss.dashboard.workspace.SkinsManagerImpl
+[0m[0m21:23:35,604 INFO  [org.jboss.dashboard.ui.resources.GraphicElement] (ServerService Thread Pool -- 65) Deploying files for org.jboss.dashboard.ui.resources.Skin Default_Skin
+[0m[0m21:23:35,651 INFO  [org.jboss.dashboard.cluster.ClusterNodesManager] (ServerService Thread Pool -- 65) Registering cluster node with ip address 192.168.178.32
+[0m[0m21:23:35,661 INFO  [org.jboss.dashboard.cluster.ClusterNodesManager] (ServerService Thread Pool -- 65) Successfully registered cluster node with ip address 192.168.178.32 and identifier 1001
+[0m[0m21:23:35,661 INFO  [org.jboss.dashboard.workspace.GraphicElementManagerImpl] (ServerService Thread Pool -- 65) Starting org.jboss.dashboard.workspace.ResourceGalleryManagerImpl
+[0m[0m21:23:35,883 INFO  [org.jboss.dashboard.workspace.GraphicElementManagerImpl] (ServerService Thread Pool -- 65) Starting org.jboss.dashboard.workspace.LayoutsManagerImpl
+[0m[0m21:23:35,931 INFO  [org.jboss.dashboard.ui.resources.GraphicElement] (ServerService Thread Pool -- 65) Deploying files for org.jboss.dashboard.ui.resources.Layout Default_Layout
+[0m[0m21:23:35,935 INFO  [org.jboss.dashboard.ui.resources.GraphicElement] (ServerService Thread Pool -- 65) Deploying files for org.jboss.dashboard.ui.resources.Layout Default_template_with_sliding_menu
+[0m[0m21:23:35,937 INFO  [org.jboss.dashboard.ui.resources.GraphicElement] (ServerService Thread Pool -- 65) Deploying files for org.jboss.dashboard.ui.resources.Layout Template_25-50-25
+[0m[0m21:23:35,939 INFO  [org.jboss.dashboard.ui.resources.GraphicElement] (ServerService Thread Pool -- 65) Deploying files for org.jboss.dashboard.ui.resources.Layout Template_25-75
+[0m[0m21:23:35,941 INFO  [org.jboss.dashboard.ui.resources.GraphicElement] (ServerService Thread Pool -- 65) Deploying files for org.jboss.dashboard.ui.resources.Layout Template_75-25
+[0m[0m21:23:35,977 INFO  [org.jboss.dashboard.workspace.GraphicElementManagerImpl] (ServerService Thread Pool -- 65) Starting org.jboss.dashboard.workspace.EnvelopesManagerImpl
+[0m[0m21:23:36,002 INFO  [org.jboss.dashboard.ui.resources.GraphicElement] (ServerService Thread Pool -- 65) Deploying files for org.jboss.dashboard.ui.resources.Envelope Default_Envelope
+[0m[0m21:23:36,117 INFO  [org.jboss.as.server] (Controller Boot Thread) JBAS018559: Deployed "database-service.jar" (runtime-name : "database-service.jar")
+[0m[0m21:23:36,118 INFO  [org.jboss.as.server] (Controller Boot Thread) JBAS018559: Deployed "ModeShape.vdb" (runtime-name : "ModeShape.vdb")
+[0m[0m21:23:36,118 INFO  [org.jboss.as.server] (Controller Boot Thread) JBAS018559: Deployed "teiid-dashboard-builder.war" (runtime-name : "teiid-dashboard-builder.war")
+[0m[0m21:23:36,118 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 28) JBAS018559: Deployed "CustomerContextVDB.vdb" (runtime-name : "CustomerContextVDB.vdb")
+[0m[0m21:23:36,118 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 28) JBAS018559: Deployed "integration-platform-console.war" (runtime-name : "integration-platform-console.war")
+[0m[0m21:23:36,119 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 50) JBAS018559: Deployed "modeshape-cmis.war" (runtime-name : "modeshape-cmis.war")
+[0m[0m21:23:36,119 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 51) JBAS018559: Deployed "teiid-odata-8.7.1.redhat-8.war" (runtime-name : "teiid-odata-8.7.1.redhat-8.war")
+[0m[0m21:23:36,119 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 50) JBAS018559: Deployed "modeshape-webdav.war" (runtime-name : "modeshape-webdav.war")
+[0m[0m21:23:36,119 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 50) JBAS018559: Deployed "modeshape-rest.war" (runtime-name : "modeshape-rest.war")
+[0m[0m21:23:36,124 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015961: Http management interface listening on http://127.0.0.1:9990/management
+[0m[0m21:23:36,125 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015951: Admin console listening on http://127.0.0.1:9990
+[0m[0m21:23:36,125 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015874: JBoss Red Hat JBoss Data Virtualization 6.1.0 (AS 7.4.3.Final-redhat-2) started in 17122ms - Started 1013 of 1055 services (110 services are lazy, passive or on-demand)
+[0m/Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/bin/standalone.sh: line 281: 26195 Killed: 9               "/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/bin/java" -D"[Standalone]" -server -XX:+UseCompressedOops -verbose:gc -Xloggc:"/Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/standalone/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1302m -Xmx1302m -XX:MaxPermSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -Djboss.modules.policy-permissions=true "-Dorg.jboss.boot.log.file=/Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/standalone/log/server.log" "-Dlogging.configuration=file:/Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/standalone/configuration/logging.properties" -jar "/Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/jboss-modules.jar" -mp "/Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/modules" -jaxpmodule javax.xml.jaxp-provider org.jboss.as.standalone -Djboss.home.dir="/Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3" -Djboss.server.base.dir="/Users/cvanball/Projects/git/dv-fuse-integration-demo/target/dv/jboss-eap-6.3/standalone"
