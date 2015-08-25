@@ -18,26 +18,20 @@ dashboardAdmin/redhat1!
 -Download from jboss.org http://www.jboss.org/products/datavirt/download/  
 Put the Data Virutalization Download, jboss-dv-installer-6.1.0.redhat-3.jar, into the software folder  
   
-**STEP 2:** Build, start the container and grab the IP which is returned from startng the container  
--Build Image  
-		$ docker build -t jbossdv600 .  
--Start Container  
-		$ docker run -P -d -t jbossdv600  
--Get the Container IP  
-		$ docker inspect <$containerID>   
+**STEP 2:** View Project, Preview Data and Deploy the VDB  
+ 
   
 **STEP 3:** Browse the Data Virtualization and the Data  
 -All Data  
-		http://CONTAINER-IP:8080/odata/CustomerContextVDB/CustomerContextView.CustomerContext?$format=json  
+		http://localhost:8080/odata/CustomerContextVDB/CustomerContextView.CustomerContext?$format=json  
 -Specific Entity  
-		http://CONTAINER-IP:8080/odata/CustomerContextVDB/CustomerContext('123')?$format=json  
+		http://localhost:8080/odata/CustomerContextVDB/CustomerContext('123')?$format=json  
 -Metadata  
-		http://CONTAINER-IP:8080/odata/CustomerContextVDB/$metadata  
+		http://localhost:8080/odata/CustomerContextVDB/$metadata  
 -Management Console to view Virtual Database  
-		http://CONTAINER-IP:8080  
+		http://localhost:8080  
 -Dashboard  
-		http://CONTAINER-IP:8080/dashboard/  
+		http://localhost:8080/dashboard/  
   
 **As Easy as 1,2,3....**
 
-![alt text](https://raw.githubusercontent.com/kpeeples/dv-odata-docker-integration-demo/master/images/dvodatadocker.jpeg "Teiid VDBs")
