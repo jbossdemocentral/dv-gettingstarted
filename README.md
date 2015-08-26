@@ -25,10 +25,10 @@ dashboardAdmin/redhat1!
 -Download JBDS http://www.jboss.org/products/devstudio/download/  
 -Install JBDS and the Integration Stack https://devstudio.jboss.com/updates/8.0/integration-stack/  
 -Add and start a new server with the home directory of the installed DV from above  
--Verify management and jdbc connections on the Teiid instance
--Refresh the server
+-Verify management and jdbc connections on the Teiid instance  
+-Refresh the server  
 -Import the project into JBDS (should have JBDIS installed)  
--Verify default teiid instance from actions in Teiid perspective
+-Verify default teiid instance from actions in Teiid perspective  
 -Right click on the 3 views/tables and preview the data  
 -Click on the VDB and execute the selected text ```SELECT * FROM CustomerContextView.CustomerContextTable;```  
 -Deploy the VDB  
