@@ -2,7 +2,7 @@
 DEMO="JBoss Data Virtualization Getting Started Demo" 
 AUTHORS="Kenny Peeples"
 PROJECT="git@github.com:jbossdemocentral/dv-gettingstarted.git"
-PRODUCT="JBoss DV & Fuse Integration Demo"
+PRODUCT="JBoss DV Demo"
 JBOSS_HOME_DV=./target/dv/jboss-eap-6.3
 SERVER_BIN_DV=$JBOSS_HOME_DV/bin
 SERVER_CONF_DV=$JBOSS_HOME_DV/standalone/configuration/

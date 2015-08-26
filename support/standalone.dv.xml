@@ -405,7 +405,7 @@
                         </connection-definition>
                     </connection-definitions>
                 </resource-adapter>
-                <resource-adapter id="CustomerFlatFileSourceModel">
+                <resource-adapter id="CustomerContextCSVSourceModel">
                     <module slot="main" id="org.jboss.teiid.resource-adapter.file"/>
                     <transaction-support>NoTransaction</transaction-support>
                     <connection-definitions>
@@ -416,7 +416,7 @@
                         </connection-definition>
                     </connection-definitions>
                 </resource-adapter>
-                <resource-adapter id="CustomerHistoryXMLFileSourceModel">
+                <resource-adapter id="CustomerContextXMLSourceModel">
                     <module slot="main" id="org.jboss.teiid.resource-adapter.file"/>
                     <transaction-support>NoTransaction</transaction-support>
                     <connection-definitions>
