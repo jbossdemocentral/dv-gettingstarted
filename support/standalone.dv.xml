@@ -409,7 +409,7 @@
                     <module slot="main" id="org.jboss.teiid.resource-adapter.file"/>
                     <transaction-support>NoTransaction</transaction-support>
                     <connection-definitions>
-                        <connection-definition class-name="org.teiid.resource.adapter.file.FileManagedConnectionFactory" jndi-name="java:/CustomerFlatFileSourceModel" enabled="true" pool-name="CustomerFlatFileSourceModel">
+                        <connection-definition class-name="org.teiid.resource.adapter.file.FileManagedConnectionFactory" jndi-name="java:/CustomerContextCSVSourceModel" enabled="true" pool-name="CustomerContextCSVSourceModel">
                             <config-property name="ParentDirectory">
                                 ${jboss.home.dir}/standalone/data/
                             </config-property>
@@ -420,7 +420,7 @@
                     <module slot="main" id="org.jboss.teiid.resource-adapter.file"/>
                     <transaction-support>NoTransaction</transaction-support>
                     <connection-definitions>
-                        <connection-definition class-name="org.teiid.resource.adapter.file.FileManagedConnectionFactory" jndi-name="java:/CustomerHistoryXMLFileSourceModel" enabled="true" pool-name="CustomerHistoryXMLFileSourceModel">
+                        <connection-definition class-name="org.teiid.resource.adapter.file.FileManagedConnectionFactory" jndi-name="java:/CustomerContextXMLSourceModel" enabled="true" pool-name="CustomerContextXMLSourceModel">
                             <config-property name="ParentDirectory">
                                 ${jboss.home.dir}/standalone/data/
                             </config-property>

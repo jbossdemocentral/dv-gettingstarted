@@ -53,10 +53,12 @@ As Easy as 1,2,3....
 Put the Data Virutalization Download, jboss-dv-installer-6.1.0.redhat-3.jar, into the software folder  
   
 **STEP 2:** Run Scripts  
--Run init.sh  
--Run run.sh   
+-Run ./init.sh to setup DV  
+-Run ./run.sh to run DV   
+-Run ./test.sh > out.txt to test the OData url  
   
 **STEP 3:** Browse the Data Virtualization and the Data  
+-View the out.txt to see All Data, Specific Entity and Metadata examples for XML format and/or run the three below
 -All Data  
 		http://localhost:8080/odata/CustomerContextVDB/CustomerContextView.CustomerContextTable?$format=json  
 -Specific Entity  
