@@ -45,7 +45,7 @@ dashboardAdmin/redhat1!
 -Dashboard  
 		```http://localhost:8080/dashboard/```  
   
-As Easy as 1,2,3....
+As Easy as 1,2,3....   
 
 **OPTION 2 - STEPS TO RUN WITHOUT JBDS**:  
 **STEP 1:** Clone the Repository and Download Data Virtualization  
@@ -59,7 +59,7 @@ Put the Data Virutalization Download, jboss-dv-installer-6.1.0.redhat-3.jar, int
 -Run ```./test.sh > out.txt``` to test the OData url  
   
 **STEP 3:** Browse the Data Virtualization and the Data  
--View the out.txt to see All Data, Specific Entity and Metadata examples for XML format and/or run the three below individually through the Chrome  browser
+-View the out.txt to see All Data, Specific Entity and Metadata examples for XML format and/or run the three below individually through the Chrome  browser.  
 -All Data  
 		```http://localhost:8080/odata/CustomerContextVDB/CustomerContextView.CustomerContextTable?$format=json```  
 -Specific Entity  
@@ -71,5 +71,5 @@ Put the Data Virutalization Download, jboss-dv-installer-6.1.0.redhat-3.jar, int
 -Dashboard  
 		```http://localhost:8080/dashboard/``` 
  
-As Easy as 1,2,3....
+As Easy as 1,2,3....  
 
