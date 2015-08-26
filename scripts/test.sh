@@ -6,5 +6,3 @@ curl -# -u teiidUser:redhat1! "http://localhost:8080/odata/CustomerContextVDB/Cu
 
 echo "Get Metadata provided in the VDB"
 curl -# -u teiidUser:redhat1! "http://localhost:8080/odata/CustomerContextVDB/$metadata" | xmllint --format -
-
-

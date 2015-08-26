@@ -3,12 +3,12 @@ DEMO="JBoss Data Virtualization Getting Started Demo"
 AUTHORS="Kenny Peeples"
 PROJECT="git@github.com:jbossdemocentral/dv-gettingstarted.git"
 PRODUCT="JBoss DV Demo"
-JBOSS_HOME_DV=./target/dv/jboss-eap-6.3
+JBOSS_HOME_DV=../target/dv/jboss-eap-6.3
 SERVER_BIN_DV=$JBOSS_HOME_DV/bin
 SERVER_CONF_DV=$JBOSS_HOME_DV/standalone/configuration/
-SRC_DIR=./software
-DV_SUPPORT_DIR=./support
-PRJ_DIR=./projects
+SRC_DIR=../software
+DV_SUPPORT_DIR=../support
+PRJ_DIR=../projects
 DV=jboss-dv-installer-6.1.0.redhat-3.jar
 DV_VERSION=6.1.0
 
