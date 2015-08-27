@@ -1,0 +1,8 @@
+.git
+target
+docs
+projects
+init.bat
+init.sh
+README.md
+.DS_Store

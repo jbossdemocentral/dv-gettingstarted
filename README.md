@@ -1,4 +1,4 @@
-## Data Virtualization Getting Started for a Developer Hellow World Experience
+## Data Virtualization Getting Started for a Developer Hello World Experience
 
 ![alt text](https://raw.githubusercontent.com/jbossdemocentral/dv-gettingstarted/master/docs/images/dvdemo-gettingstarted2.png "Teiid VDBs")  
 
@@ -73,3 +73,42 @@ Put the Data Virutalization Download, jboss-dv-installer-6.1.0.redhat-3.jar, int
  
 As Easy as 1,2,3....  
 
+**OPTION 3 - CONTAINERIZED INSTALL**: 
+
+**STEP 1:** Clone the Repository and Download Data Virtualization  
+-git clone https://github.com/jbossdemocentral/dv-gettingstarted.git  
+-Download from jboss.org http://www.jboss.org/products/datavirt/download/  
+Put the Data Virutalization Download, jboss-dv-installer-6.1.0.redhat-3.jar, into the software folder  
+
+**STEP 2:** Create and Run Container  
+- Copy Dockerfile and .dockerignore files from support/docker directory to the project root.
+- Build demo image
+
+ 	```
+ 	docker build -t jbossdemocentral/dv-gettingstarted .
+ 	```
+
+- Start demo container
+
+	```
+	docker run -it -p 9990 -p 9999:9999 -p 8080:8080 -p 31000:31000 jbossdemocentral/dv-gettingstarted
+	```
+- In many cases, the docker socket may not utilize the ```localhost``` interface. Changes may be required to modify the following scripts to utilize the correct interface docker is utilizing
+	- ```run.sh``` 
+
+-Run ```./test.sh > out.txt``` to test the OData url  
+
+**STEP 3:** Browse the Data Virtualization and the Data  
+-View the out.txt to see All Data, Specific Entity and Metadata examples for XML format and/or run the three below individually through the Chrome  browser.  
+-All Data  
+		```http://<DOCKER_HOST>:8080/odata/CustomerContextVDB/CustomerContextView.CustomerContextTable?$format=json```  
+-Specific Entity  
+		```http://<DOCKER_HOST>:8080/odata/CustomerContextVDB/CustomerContextTable('123')?$format=json```   
+-Metadata  
+		```http://<DOCKER_HOST>:8080/odata/CustomerContextVDB/$metadata```     
+-Management Console to view Virtual Database  
+		```http://<DOCKER_HOST>:8080```  
+-Dashboard  
+		```http://<DOCKER_HOST>:8080/dashboard/``` 
+ 
+As Easy as 1,2,3....  
