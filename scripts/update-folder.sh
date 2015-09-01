@@ -5,9 +5,9 @@ parentName=${PWD%/*}
 # Update CSV model with correct folder path in FlatFileHomeUrl
 sed -i.bak "s:/home/kpeeples/gitrepository/jbossdemocentral/dv-gettingstarted/support/data:$parentName/support/data:" "../projects/helloworldgettingstarted/CustomerContext/sources/CustomerContextCSVSourceModel.xmi"
 # Update CSV model with correct folder path in LocalFilePath
-sed -i.bak "s:/home/kpeeples/gitrepository/jbossdemocentral/dv-gettingstarted/support/data:$parentName/support/data/CustomerHistory.xml:" "../projects/helloworldgettingstarted/CustomerContext/sources/CustomerContextXMLSourceModel.xmi"
+sed -i.bak "s:/home/kpeeples/gitrepository/jbossdemocentral/dv-gettingstarted/support/data:$parentName/support/data:" "../projects/helloworldgettingstarted/CustomerContext/sources/CustomerContextXMLSourceModel.xmi"
 # Update VDB for parent directories
-unzip ../projects/helloworldgettingstarted/CustomerContext/virtual_databases/CustomerContextVDB.vdb -d tmp
+unzip ../projects/helloworldgettingstarted/CustomerContext/virtual_databases/CustomerContextVDB.vdb -d ../projects/helloworldgettingstarted/CustomerContext/virtual_databases/tmp
 # MoveModel Files Over
 cp ../projects/helloworldgettingstarted/CustomerContext/sources/CustomerContextCSVSourceModel.xmi ../projects/helloworldgettingstarted/CustomerContext/virtual_databases/tmp/CustomerContext/sources/CustomerContextCSVSourceModel.xmi
 cp ../projects/helloworldgettingstarted/CustomerContext/sources/CustomerContextCSVSourceModel.xmi ../projects/helloworldgettingstarted/CustomerContext/virtual_databases/tmp/CustomerContext/sources/CustomerContextXMLSourceModel.xmi
