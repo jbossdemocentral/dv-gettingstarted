@@ -15,3 +15,5 @@ cp ../projects/helloworldgettingstarted/CustomerContext/sources/CustomerContextC
 cd ../projects/helloworldgettingstarted/CustomerContext/virtual_databases/tmp/
 zip -r CustomerContextVDB.vdb .
 cp CustomerContextVDB.vdb ..
+cd ..
+rm -Rf tmp
