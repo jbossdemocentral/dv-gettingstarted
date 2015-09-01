@@ -6,7 +6,7 @@
   </mmcore:ModelAnnotation>
   <mmcore:AnnotationContainer xmi:uuid="mmuuid:5491b946-d369-4da7-bee3-bfb835726bb9">
     <annotations xmi:uuid="mmuuid:2e6a57fa-ce43-420f-a864-90529b4d5ba9" annotatedObject="mmuuid/e39d3cee-3896-44c0-a9cb-4f57363e49f5">
-      <tags xmi:uuid="mmuuid:08524d3b-1757-4aba-bddb-be39c40bc726" key="connection:FlatFileHomeUrl" value="/home/kpeeples/gitrepository/jbossdemocentral/dv-odata-docker-integration-demo/support/data"/>
+      <tags xmi:uuid="mmuuid:08524d3b-1757-4aba-bddb-be39c40bc726" key="connection:FlatFileHomeUrl" value="/home/kpeeples/gitrepository/jbossdemocentral/dv-gettingstarted/support/data"/>
       <tags xmi:uuid="mmuuid:03f75f98-2bb3-4f06-bccc-6713bd787596" key="connectionProfile:connectionProfileName" value="CustomerContextCSVSource"/>
       <tags xmi:uuid="mmuuid:aed81719-9115-4bde-92b8-687d51b37f5d" key="connection:FlatFileDelimeter" value="COMMA"/>
       <tags xmi:uuid="mmuuid:ccdeeba0-ab3b-4bf1-8f5a-341c3e88f68e" key="connectionProfile:connectionProfileProviderId" value="org.eclipse.datatools.connectivity.oda.flatfile"/>

@@ -12,7 +12,7 @@
       <tags xmi:uuid="mmuuid:699513b3-5559-420e-a985-fb8502d5ba64" key="connectionProfile:connectionProfileInstanceID" value="9a2a6c91-42ba-11e5-ac1e-af12be0cd5c8"/>
       <tags xmi:uuid="mmuuid:707228e6-1e3d-4f0c-98cf-bf9ef21991e5" key="connectionProfile:connectionProfileCategory" value="org.teiid.designer.import.category"/>
       <tags xmi:uuid="mmuuid:9b1f214f-016f-4d1d-89ac-3ba5eaff3a96" key="translator:name" value="file"/>
-      <tags xmi:uuid="mmuuid:75e5aa4a-0e8b-4299-8b91-c8bb2f1198fd" key="connection:LocalFilePath" value="/home/kpeeples/gitrepository/jbossdemocentral/dv-odata-docker-integration-demo/support/data/CustomerHistory.xml"/>
+      <tags xmi:uuid="mmuuid:75e5aa4a-0e8b-4299-8b91-c8bb2f1198fd" key="connection:LocalFilePath" value="/home/kpeeples/gitrepository/jbossdemocentral/dv-gettingstarted/support/data/CustomerHistory.xml"/>
       <tags xmi:uuid="mmuuid:752e1ec4-15de-4a4c-8876-0301a0d06184" key="modelExtensionDefinition:relational" value="relational"/>
     </annotations>
     <annotations xmi:uuid="mmuuid:ba3ac6fa-ee15-4f33-b2b6-b527c4e3e088" annotatedObject="mmuuid/752e1ec4-15de-4a4c-8876-0301a0d06184">
