@@ -22,6 +22,8 @@ dashboardAdmin/redhat1!
 -Install Data Virtualization enabling OData  
   
 **STEP 2:** Import, Preview Data and Deploy  
+-Note:  In order to use the source files and VDB the Parent folder has to be updated to your local git clone directory for the project.  To do that run the script below otherwise manual update to the files - CustomerContextCSVSourceModel.xmi, CustomerContextXMLSourceModel.xmi and CustomerContextVDB.vdb - would be required for the correct fodler of the CSV and XML/
+-From the scripts folder run ```./update-folders.sh```  
 -Download JBDS http://www.jboss.org/products/devstudio/download/  
 -Install JBDS and the Integration Stack https://devstudio.jboss.com/updates/8.0/integration-stack/  
 -Add and start a new server with the home directory of the installed DV from above  
@@ -54,6 +56,7 @@ As Easy as 1,2,3....
 Put the Data Virutalization Download, jboss-dv-installer-6.1.0.redhat-3.jar, into the software folder  
   
 **STEP 2:** Run Scripts in the scripts folder  
+-Note: in this option the data is set in ${jboss.home.dir}/standalone/data/ and the standalone.xml is update for the VDB  
 -Run ```./init.sh``` to setup DV  
 -Run ```./run.sh``` to run DV.  Verify DV started completely with ```tail -f dv.log```   
 -Run ```./test.sh > out.txt``` to test the OData url  
@@ -81,20 +84,21 @@ As Easy as 1,2,3....
 Put the Data Virutalization Download, jboss-dv-installer-6.1.0.redhat-3.jar, into the software folder  
 
 **STEP 2:** Create and Run Container  
-- Copy Dockerfile and .dockerignore files from support/docker directory to the project root.
-- Build demo image
+- Note: in this option the data is set in ${jboss.home.dir}/standalone/data/ and the standalone.xml is update for the VDB  
+- Copy Dockerfile and .dockerignore files from support/docker directory to the project root.  
+- Build demo image  
 
- 	```
- 	docker build -t jbossdemocentral/dv-gettingstarted .
- 	```
+ 	```  
+ 	docker build -t jbossdemocentral/dv-gettingstarted .  
+ 	```  
 
-- Start demo container
+- Start demo container  
 
-	```
-	docker run -it -p 9990 -p 9999:9999 -p 8080:8080 -p 31000:31000 jbossdemocentral/dv-gettingstarted
-	```
-- In many cases, the docker socket may not utilize the ```localhost``` interface. Changes may be required to modify the following scripts to utilize the correct interface docker is utilizing
-	- ```run.sh``` 
+	```  
+	docker run -it -p 9990 -p 9999:9999 -p 8080:8080 -p 31000:31000 jbossdemocentral/dv-gettingstarted  
+	```  
+- In many cases, the docker socket may not utilize the ```localhost``` interface. Changes may be required to modify the following scripts to utilize the correct interface docker is utilizing  
+	- ```run.sh```   
 
 -Run ```./test.sh > out.txt``` to test the OData url  
 
