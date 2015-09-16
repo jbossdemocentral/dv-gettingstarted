@@ -22,9 +22,12 @@ dashboardAdmin/redhat1!
 -Install Data Virtualization enabling OData  
   
 **STEP 2:** Import, Preview Data and Deploy  
--Note:  In order to use the source files and VDB the Parent folder has to be updated to your local git clone directory for the project.  To do that run the script below otherwise manual update to the files - CustomerContextCSVSourceModel.xmi, CustomerContextXMLSourceModel.xmi and CustomerContextVDB.vdb - would be required for the correct fodler of the CSV and XML/
--From the scripts folder run ```./update-folders.sh```  
--Download JBDS http://www.jboss.org/products/devstudio/download/  
+-NOTE:  In order to use the source files and VDB the Parent folder has to be updated to your local git clone directory for the project.  To do that run the script below otherwise manual update to the files:
+CustomerContextCSVSourceModel.xmi  
+CustomerContextXMLSourceModel.xmi  
+CustomerContextVDB.vdb  
+-From the scripts folder run  ```./update-folders.sh```  OR   ```./update-folders.bat```  
+-Download JBDS http://www.jboss.org/products/devstudio/download/    
 -Install JBDS and the Integration Stack https://devstudio.jboss.com/updates/8.0/integration-stack/  
 -Add and start a new server with the home directory of the installed DV from above  
 -Verify management and jdbc connections on the Teiid instance  
@@ -32,7 +35,8 @@ dashboardAdmin/redhat1!
 -Import the project into JBDS (should have JBDIS installed)  
 -Verify default teiid instance from actions in Teiid perspective  
 -Right click on the 3 views/tables and preview the data  
--Click on the VDB and execute the selected text ```SELECT * FROM CustomerContextView.CustomerContextTable;```  
+-Click on the VDB and execute the selected text  
+```SELECT * FROM CustomerContextView.CustomerContextTable;```  
 -Deploy the VDB  
   
 **STEP 3:** Browse the Data Virtualization and the Data throughthe Chrome Browser  
@@ -56,7 +60,7 @@ As Easy as 1,2,3....
 Put the Data Virutalization Download, jboss-dv-installer-6.1.0.redhat-3.jar, into the software folder  
   
 **STEP 2:** Run Scripts in the scripts folder  
--Note: in this option the data is set in ${jboss.home.dir}/standalone/data/ and the standalone.xml is update for the VDB  
+-NOTE: In this option the data is set in ${jboss.home.dir}/standalone/data/ and the standalone.xml is update for the VDB.  The corresponding bat files require update.  
 -Run ```./init.sh``` to setup DV  
 -Run ```./run.sh``` to run DV.  Verify DV started completely with ```tail -f dv.log```   
 -Run ```./test.sh > out.txt``` to test the OData url  
