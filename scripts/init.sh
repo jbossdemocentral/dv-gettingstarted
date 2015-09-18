@@ -9,8 +9,8 @@ SERVER_CONF_DV=$JBOSS_HOME_DV/standalone/configuration/
 SRC_DIR=../software
 DV_SUPPORT_DIR=../support
 PRJ_DIR=../projects
-DV=jboss-dv-installer-6.1.0.redhat-3.jar
-DV_VERSION=6.1.0
+DV=jboss-dv-installer-6.2.0.redhat-2.jar
+DV_VERSION=6.2.0
 
 # wipe screen.
 clear 
