@@ -73,13 +73,13 @@ echo "Installed EAP 6.4.3 Patch"
 
 echo "Shutting down server ..."
 
-./shutdown_server.sh
+$JBOSS_HOME_DV/bin/shutdown_server.sh
 
 # Run DV installer.
 echo Product installer running now...
 echo
 
-java -jar $SRC_DIR/$DV $DV_SUPPORT_DIR/dv62-InstallationScript6.1.xml
+java -jar $SRC_DIR/$DV $DV_SUPPORT_DIR/dv62-InstallationScript.xml
 
 read -p "Post DV install configuration <hit return or wait 5 seconds>" -t 5
 echo
