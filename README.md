@@ -1,6 +1,6 @@
 ## Data Virtualization Getting Started for a Developer Hello World Experience
 
-Please Note.  Currently updating from 6.1 to 6.2.
+NOTE: In order to run this demo for DV 6.2 you must download EAP 6.4.0, EAP 6.4.3 Patch and DV 6.2.  If you have any issues please add an issue and I will resolve.
 
 ![alt text](https://raw.githubusercontent.com/jbossdemocentral/dv-gettingstarted/master/docs/images/dvdemo-gettingstarted2.png "Teiid VDBs")  
 
@@ -21,6 +21,7 @@ dashboardAdmin/redhat1!
 **STEP 1:** Clone the Repository and Download Data Virtualization  
 -git clone https://github.com/jbossdemocentral/dv-gettingstarted.git  
 -Download from jboss.org http://www.jboss.org/products/datavirt/download/  
+-You must download and install EAP 6.4 and the EAP 6.4.3 patch first.  
 -Install Data Virtualization enabling OData  
   
 **STEP 2:** Import, Preview Data and Deploy  
@@ -59,6 +60,7 @@ As Easy as 1,2,3....
 **STEP 1:** Clone the Repository and Download Data Virtualization  
 -git clone https://github.com/jbossdemocentral/dv-gettingstarted.git  
 -Download from jboss.org http://www.jboss.org/products/datavirt/download/  
+-You must download and install EAP 6.4 and the EAP 6.4.3 as well.  
 Put the Data Virutalization Download, jboss-dv-installer-6.1.0.redhat-3.jar, into the software folder  
   
 **STEP 2:** Run Scripts in the scripts folder  
@@ -87,6 +89,7 @@ As Easy as 1,2,3....
 **STEP 1:** Clone the Repository and Download Data Virtualization  
 -git clone https://github.com/jbossdemocentral/dv-gettingstarted.git  
 -Download from jboss.org http://www.jboss.org/products/datavirt/download/  
+--You must download and install EAP 6.4 and the EAP 6.4.3 patch as well.  
 Put the Data Virutalization Download, jboss-dv-installer-6.1.0.redhat-3.jar, into the software folder  
 
 **STEP 2:** Create and Run Container  
