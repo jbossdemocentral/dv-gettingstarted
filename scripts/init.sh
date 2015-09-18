@@ -3,7 +3,7 @@ DEMO="JBoss Data Virtualization Getting Started Demo"
 AUTHORS="Kenny Peeples"
 PROJECT="git@github.com:jbossdemocentral/dv-gettingstarted.git"
 PRODUCT="JBoss DV Demo"
-JBOSS_HOME_DV=../target/dv/jboss-eap-6.4
+JBOSS_HOME_DV=../target/dv6.2/EAP-6.4.0
 SERVER_BIN_DV=$JBOSS_HOME_DV/bin
 SERVER_CONF_DV=$JBOSS_HOME_DV/standalone/configuration/
 SRC_DIR=../software
@@ -11,6 +11,8 @@ DV_SUPPORT_DIR=../support
 PRJ_DIR=../projects
 DV=jboss-dv-installer-6.2.0.redhat-2.jar
 DV_VERSION=6.2.0
+EAP=jboss-eap-6.4.0-installer.jar
+EAP_VERSION=6.4.0
 
 # wipe screen.
 clear 
@@ -49,11 +51,35 @@ fi
 read -p "Starting DV Install <hit return or wait 5 seconds>" -t 2
 echo
 
+# Run EAP installer.
+echo Product installer running now...
+echo
+
+java -jar $SRC_DIR/$EAP $DV_SUPPORT_DIR/eap64-InstallationScript.xml
+
+echo "Installed EAP Server"
+
+#  start server install the eap 6.4.3 patch
+$JBOSS_HOME_DV/bin/standalone.sh >>console.log &
+
+echo "Started EAP Server"
+
+echo "Installing EAP 6.4.3 Patch ..."
+
+# install patch
+$JBOSS_HOME_DV/bin/jboss-cli.sh --command="patch apply $SRC_DIR/jboss-eap-6.4.3-patch.zip"
+
+echo "Installed EAP 6.4.3 Patch"
+
+echo "Shutting down server ..."
+
+./shutdown_server.sh
+
 # Run DV installer.
 echo Product installer running now...
 echo
 
-java -jar $SRC_DIR/$DV $DV_SUPPORT_DIR/InstallationScript6.1.xml
+java -jar $SRC_DIR/$DV $DV_SUPPORT_DIR/dv62-InstallationScript6.1.xml
 
 read -p "Post DV install configuration <hit return or wait 5 seconds>" -t 5
 echo
