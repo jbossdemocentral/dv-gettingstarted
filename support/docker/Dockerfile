@@ -6,7 +6,7 @@ MAINTAINER Andrew Block <andy.block@gmail.com>
 
 
 # Environment Variables 
-ENV DV_HOME /opt/jboss/dv/jboss-eap-6.3
+ENV DV_HOME /opt/jboss/dv/jboss-eap-6.4
 ENV DV_VERSION_MAJOR 6
 ENV DV_VERSION_MINOR 2
 ENV DV_VERSION_MICRO 0
