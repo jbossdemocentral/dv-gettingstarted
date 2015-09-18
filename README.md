@@ -20,7 +20,7 @@ dashboardAdmin/redhat1!
 ## Steps to Run the Demo
 
 **OPTION 1 - RUNNING AND PREVIEWING WITHIN JBDS**:  
-**STEP 1:** Clone the Repository and Download Data Virtualization  
+**STEP 1:** Clone the Repository and Download EAP, EAP Patch and Data Virtualization  
 -git clone https://github.com/jbossdemocentral/dv-gettingstarted.git  
 -Download DV from jboss.org http://www.jboss.org/products/datavirt/download/  
 -Download EAP 6.4.0 from jboss.org http://www.jboss.org/products/eap/download/  
@@ -60,12 +60,12 @@ CustomerContextVDB.vdb
 As Easy as 1,2,3....   
 
 **OPTION 2 - STEPS TO RUN WITHOUT JBDS**:  
-**STEP 1:** Clone the Repository and Download Data Virtualization  
+**STEP 1:** Clone the Repository and Download EAP, EAP Patch and Data Virtualization  
 -git clone https://github.com/jbossdemocentral/dv-gettingstarted.git  
 -Download DV 6.2 from jboss.org http://www.jboss.org/products/datavirt/download/  
 -Download EAP 6.4.0 from jboss.org http://www.jboss.org/products/eap/download/  
 -Download EAP 6.4.3 Roll up patch from CSP https://access.redhat.com/jbossnetwork/restricted/softwareDownload.html?softwareId=39353  
--Put the EAP 6.4.0, EAP 6.4.3 Roll up patch and Data Virutalization into the software folder  
+-Put the EAP 6.4.0, EAP 6.4.3 Roll up patch and Data Virutalization downloads into the software folder  
   
 **STEP 2:** Run Scripts in the scripts folder  
 -NOTE: In this option the data is set in ${jboss.home.dir}/standalone/data/ and the standalone.xml is update for the VDB.  The corresponding bat files require update.  
@@ -90,12 +90,12 @@ As Easy as 1,2,3....
 
 **OPTION 3 - CONTAINERIZED INSTALL**: 
 
-**STEP 1:** Clone the Repository and Download Data Virtualization  
+**STEP 1:** Clone the Repository and Download EAP, EAP Patch and Data Virtualization  
 -git clone https://github.com/jbossdemocentral/dv-gettingstarted.git  
 -Download DV 6.2 from jboss.org http://www.jboss.org/products/datavirt/download/  
 -Download EAP 6.4.0 from jboss.org http://www.jboss.org/products/eap/download/  
 -Download EAP 6.4.3 Roll up patch from CSP https://access.redhat.com/jbossnetwork/restricted/softwareDownload.html?softwareId=39353  
--Put the EAP 6.4.0, EAP 6.4.3 Roll up patch and Data Virutalization into the software folder  
+-Put the EAP 6.4.0, EAP 6.4.3 Roll up patch and Data Virutalization downloads into the software folder  
 
 **STEP 2:** Create and Run Container  
 - Note: in this option the data is set in ${jboss.home.dir}/standalone/data/ and the standalone.xml is update for the VDB  
