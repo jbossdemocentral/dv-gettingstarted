@@ -4,7 +4,7 @@
 #
 # author: kpeeples@redhat.com
 #
-DV_DIR=../target/dv/jboss-eap-6.3
+DV_DIR=../target/dv6.2/EAP-6.4.0
 FILE=../dv.log
 echo 
 echo "Starting JBoss Data Virtualization"
