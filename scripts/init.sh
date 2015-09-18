@@ -73,7 +73,7 @@ echo "Installed EAP 6.4.3 Patch"
 
 echo "Shutting down server ..."
 
-$JBOSS_HOME_DV/bin/shutdown_server.sh
+$JBOSS_HOME_DV/bin/jboss-cli.sh --connect command=:shutdown
 
 # Run DV installer.
 echo Product installer running now...
