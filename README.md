@@ -2,6 +2,8 @@
 
 NOTE: In order to run this demo for DV 6.2 you must download EAP 6.4.0, EAP 6.4.3 Patch and DV 6.2.  If you have any issues please add an issue and I will resolve.
 
+NOTE: Currently option 1 is working properly with the manual steps.  Correcting the option 2 automated steps.
+
 ![alt text](https://raw.githubusercontent.com/jbossdemocentral/dv-gettingstarted/master/docs/images/dvdemo-gettingstarted2.png "Teiid VDBs")  
 
 This Project contains a CSV file and XML File as datasources for a federated view in a Virtual Database.  You can view the project, preview data, deploy the VDB and browse to the OData URLs. 
