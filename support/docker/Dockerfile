@@ -8,9 +8,9 @@ MAINTAINER Andrew Block <andy.block@gmail.com>
 # Environment Variables 
 ENV DV_HOME /opt/jboss/dv/jboss-eap-6.3
 ENV DV_VERSION_MAJOR 6
-ENV DV_VERSION_MINOR 1
+ENV DV_VERSION_MINOR 2
 ENV DV_VERSION_MICRO 0
-ENV DV_VERSION_BUILD redhat-3
+ENV DV_VERSION_BUILD redhat-2
 
 # ADD Installation Files
 COPY support/InstallationScript6.1.xml software/jboss-dv-installer-$DV_VERSION_MAJOR.$DV_VERSION_MINOR.$DV_VERSION_MICRO.$DV_VERSION_BUILD.jar /opt/jboss/
