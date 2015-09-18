@@ -1,8 +1,8 @@
 ## Data Virtualization Getting Started for a Developer Hello World Experience
 
-NOTE: In order to run this demo for DV 6.2 you must download EAP 6.4.0, EAP 6.4.3 Patch and DV 6.2.  If you have any issues please add an issue and I will resolve.
+NOTE: In order to run this demo for DV 6.2 you must download EAP 6.4.0, EAP 6.4.3 Patch and DV 6.2.  If you have any issues please add an issue and I will resolve.  
 
-NOTE: Currently option 1 is working properly with the manual steps.  Correcting the option 2 automated steps.
+NOTE: Currently option 1 is working properly with the manual steps.  Correcting the option 2 automated steps.  
 
 ![alt text](https://raw.githubusercontent.com/jbossdemocentral/dv-gettingstarted/master/docs/images/dvdemo-gettingstarted2.png "Teiid VDBs")  
 
@@ -22,9 +22,9 @@ dashboardAdmin/redhat1!
 **OPTION 1 - RUNNING AND PREVIEWING WITHIN JBDS**:  
 **STEP 1:** Clone the Repository and Download Data Virtualization  
 -git clone https://github.com/jbossdemocentral/dv-gettingstarted.git  
--Download DV from jboss.org http://www.jboss.org/products/datavirt/download/ 
--Download EAP 6.4.0 from jboss.org http://www.jboss.org/products/eap/download/
--Download EAP 6.4.3 Roll up patch from CSP https://access.redhat.com/jbossnetwork/restricted/softwareDownload.html?softwareId=39353
+-Download DV from jboss.org http://www.jboss.org/products/datavirt/download/  
+-Download EAP 6.4.0 from jboss.org http://www.jboss.org/products/eap/download/  
+-Download EAP 6.4.3 Roll up patch from CSP https://access.redhat.com/jbossnetwork/restricted/softwareDownload.html?softwareId=39353  
 -Install EAP, EAP Rollup Patch and Data Virtualization enabling OData  
   
 **STEP 2:** Import, Preview Data and Deploy  
@@ -63,8 +63,8 @@ As Easy as 1,2,3....
 **STEP 1:** Clone the Repository and Download Data Virtualization  
 -git clone https://github.com/jbossdemocentral/dv-gettingstarted.git  
 -Download DV 6.2 from jboss.org http://www.jboss.org/products/datavirt/download/  
--Download EAP 6.4.0 from jboss.org http://www.jboss.org/products/eap/download/
--Download EAP 6.4.3 Roll up patch from CSP https://access.redhat.com/jbossnetwork/restricted/softwareDownload.html?softwareId=39353
+-Download EAP 6.4.0 from jboss.org http://www.jboss.org/products/eap/download/  
+-Download EAP 6.4.3 Roll up patch from CSP https://access.redhat.com/jbossnetwork/restricted/softwareDownload.html?softwareId=39353  
 -Put the EAP 6.4.0, EAP 6.4.3 Roll up patch and Data Virutalization into the software folder  
   
 **STEP 2:** Run Scripts in the scripts folder  
@@ -93,8 +93,8 @@ As Easy as 1,2,3....
 **STEP 1:** Clone the Repository and Download Data Virtualization  
 -git clone https://github.com/jbossdemocentral/dv-gettingstarted.git  
 -Download DV 6.2 from jboss.org http://www.jboss.org/products/datavirt/download/  
--Download EAP 6.4.0 from jboss.org http://www.jboss.org/products/eap/download/
--Download EAP 6.4.3 Roll up patch from CSP https://access.redhat.com/jbossnetwork/restricted/softwareDownload.html?softwareId=39353
+-Download EAP 6.4.0 from jboss.org http://www.jboss.org/products/eap/download/  
+-Download EAP 6.4.3 Roll up patch from CSP https://access.redhat.com/jbossnetwork/restricted/softwareDownload.html?softwareId=39353  
 -Put the EAP 6.4.0, EAP 6.4.3 Roll up patch and Data Virutalization into the software folder  
 
 **STEP 2:** Create and Run Container  
