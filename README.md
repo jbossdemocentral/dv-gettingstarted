@@ -35,10 +35,11 @@ This option walks you through the manual steps to install, run and test the demo
 
 **STEP 1:** Clone the Repository and Download EAP, EAP Patch and Data Virtualization  
 A. git clone https://github.com/jbossdemocentral/dv-gettingstarted.git  
-B. Download DV 6.1 or 6.2   
+B. Download DV 6.1 (1 download) or 6.2 (3 downloads)     
 -For DV 6.1, Download from jboss.org http://www.jboss.org/products/datavirt/download/  
 -For DV 6.2, Download EAP 6.4.0 from jboss.org http://www.jboss.org/products/eap/download/  
 -For DV 6.2, Download EAP 6.4.3 Roll up patch from CSP https://access.redhat.com/jbossnetwork/restricted/softwareDownload.html?softwareId=39353  
+-For DV 6.2, Download from jboss.org http://www.jboss.org/products/datavirt/download/   
 C. Install DV 6.1 or 6.2 with ```java -jar installer```  
 -For DV 6.1 install Data Virtualization enabling OData  
 -For DV 6.2 Install EAP, EAP Rollup Patch and Data Virtualization enabling OData  
