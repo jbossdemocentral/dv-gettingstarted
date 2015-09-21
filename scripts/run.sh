@@ -9,7 +9,7 @@ FILE=../dv.log
 JBOSS_HOME_DV=../target/dv6.2/EAP-6.4.0
 
 echo 
-echo "Starting JBoss Data Virtualization"
+echo "Starting JBoss Data Virtualization and waiting on server to start"
 echo
 
 rm $JBOSS_HOME_DV/standalone/log/server.log
