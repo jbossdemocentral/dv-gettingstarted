@@ -85,8 +85,8 @@ As Easy as 1,2,3....
 This option walks you through the automated steps to install, run and test the demo in a local environment.  This option has scripts for DV 6.2.  
 
 **STEP 1:** Clone the Repository and Download EAP, EAP Patch and Data Virtualization  
-A. git clone https://github.com/jbossdemocentral/dv-gettingstarted.git  
-B. Download the required DV 6.2 files and place in the software folder
+A. git clone https://github.com/jbossdemocentral/dv-gettingstarted.git   
+B. Download the required DV 6.2 files and place in the software folder  
 -Download DV 6.2 from jboss.org http://www.jboss.org/products/datavirt/download/  
 -Download EAP 6.4.0 from jboss.org http://www.jboss.org/products/eap/download/  
 -Download EAP 6.4.3 Roll up patch from CSP https://access.redhat.com/jbossnetwork/restricted/softwareDownload.html?softwareId=39353  
