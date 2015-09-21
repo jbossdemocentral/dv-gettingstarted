@@ -74,9 +74,9 @@ echo
 #  start server install the eap 6.4.3 patch
 $JBOSS_HOME_DV/bin/standalone.sh >>console.log &
 
-sleep 2
+sleep 4
 
-tail -f $JBOSS_HOME_DV/standalone/log/server.log | grep -m 1 "started in" | { cat; echo >> $JBOSS_HOME_DV/standalone/log/server.log; }
+tail -f $JBOSS_HOME_DV/standalone/log/server.log | grep -m 1 'started in' | xargs echo '' >> $JBOSS_HOME_DV/standalone/log/server.log
 
 echo -e "Started EAP Server\n"
 
