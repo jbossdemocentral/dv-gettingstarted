@@ -39,9 +39,9 @@ B. Download DV 6.1 or 6.2
 C. Install DV 6.1 or 6.2 with ```java -jar installer```  
 -For DV 6.1 install Data Virtualization enabling OData  
 -For DV 6.2 Install EAP, EAP Rollup Patch and Data Virtualization enabling OData  
-The roll up patch can be installed
-Linux: ```bin/jboss-cli.sh "patch apply path/to/jboss-eap-6.4.3-patch.zip"```
-Windows: ```bin\jboss-cli.bat "patch apply --override-all path\to\jboss-eap-6.4.3-patch.zip"```
+The roll up patch can be installed  
+Linux: ```bin/jboss-cli.sh "patch apply path/to/jboss-eap-6.4.3-patch.zip"```  
+Windows: ```bin\jboss-cli.bat "patch apply --override-all path\to\jboss-eap-6.4.3-patch.zip"```  
   
 **STEP 2:** Import, Preview Data and Deploy  
 -NOTE:  In order to use the source files and VDB the Parent folder has to be updated to your local git clone directory for the project.  To do that run the script below otherwise manual update to the files:
