@@ -61,15 +61,11 @@ if [ -x target ]; then
 fi
 
 read -p "Starting EAP Install <hit return>"
-echo
-
-# Run EAP installer.
-echo "Product installer running now..."
-echo
+echo -e "\n"
 
 java -jar $SRC_DIR/$EAP $DV_SUPPORT_DIR/eap64-installer.xml
 
-echo "Installed EAP Server"
+echo -e "Installed EAP Server\n"
 echo
 
 read -p "Starting EAP Server <hit return>"
@@ -78,22 +74,21 @@ echo
 #  start server install the eap 6.4.3 patch
 $JBOSS_HOME_DV/bin/standalone.sh >>console.log &
 
-read -p "Starting DV Install <hit return>"
-echo
+sleep 2
 
-echo "Started EAP Server"
+tail -f $JBOSS_HOME_DV/standalone/log/server.log | grep -m 1 "started in" | { cat; echo >> $JBOSS_HOME_DV/standalone/log/server.log; }
 
-echo "Installing EAP 6.4.3 Patch ..."
+echo -e "Started EAP Server\n"
+
+echo -e "Installing EAP 6.4.3 Patch ...\n"
 
 # install patch
 $JBOSS_HOME_DV/bin/jboss-cli.sh --command="patch apply $SRC_DIR/jboss-eap-6.4.3-patch.zip"
 
-echo "Installed EAP 6.4.3 Patch"
-
 read -p "Installed Patch <hit return>"
 echo
 
-echo "Shutting down server ..."
+echo -e "Shutting down server ...\n"
 
 $JBOSS_HOME_DV/bin/jboss-cli.sh --connect command=:shutdown
 
@@ -101,7 +96,7 @@ read -p "Shutdown Server <hit return>"
 echo
 
 # Run DV installer.
-echo "Product installer running now..."
+echo -e "Product installer running now...\n"
 echo
 
 java -jar $SRC_DIR/$DV $DV_SUPPORT_DIR/dv62-installer.xml
