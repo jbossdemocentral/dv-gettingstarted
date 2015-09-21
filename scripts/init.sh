@@ -39,6 +39,18 @@ else
 		exit
 fi
 
+# make some checks first before proceeding.	
+if [ -r $SRC_DIR/$EAP ] || [ -L $SRC_DIR/$EAP ]; then
+	    echo JBoss product sources, $EAP present...
+		echo
+else
+		echo Need to download $EAP package from the Customer Portal 
+		echo and place it in the $SRC_DIR directory to proceed...
+		echo
+		exit
+fi
+
+
 # Remove JBoss product installation if exists.
 if [ -x target ]; then
 	echo "  - existing JBoss product installation detected..."
@@ -48,19 +60,26 @@ if [ -x target ]; then
 	rm -rf target
 fi
 
-read -p "Starting DV Install <hit return or wait 5 seconds>" -t 2
+read -p "Starting EAP Install <hit return>"
 echo
 
 # Run EAP installer.
-echo Product installer running now...
+echo "Product installer running now..."
 echo
 
-java -jar $SRC_DIR/$EAP $DV_SUPPORT_DIR/eap64-InstallationScript.xml
+java -jar $SRC_DIR/$EAP $DV_SUPPORT_DIR/eap64-installer.xml
 
 echo "Installed EAP Server"
+echo
+
+read -p "Starting EAP Server <hit return>"
+echo
 
 #  start server install the eap 6.4.3 patch
 $JBOSS_HOME_DV/bin/standalone.sh >>console.log &
+
+read -p "Starting DV Install <hit return>"
+echo
 
 echo "Started EAP Server"
 
@@ -71,17 +90,23 @@ $JBOSS_HOME_DV/bin/jboss-cli.sh --command="patch apply $SRC_DIR/jboss-eap-6.4.3-
 
 echo "Installed EAP 6.4.3 Patch"
 
+read -p "Installed Patch <hit return>"
+echo
+
 echo "Shutting down server ..."
 
 $JBOSS_HOME_DV/bin/jboss-cli.sh --connect command=:shutdown
 
-# Run DV installer.
-echo Product installer running now...
+read -p "Shutdown Server <hit return>"
 echo
 
-java -jar $SRC_DIR/$DV $DV_SUPPORT_DIR/dv62-InstallationScript.xml
+# Run DV installer.
+echo "Product installer running now..."
+echo
 
-read -p "Post DV install configuration <hit return or wait 5 seconds>" -t 5
+java -jar $SRC_DIR/$DV $DV_SUPPORT_DIR/dv62-installer.xml
+
+read -p "Post DV install configuration <hit return>"
 echo
 
 echo
@@ -101,7 +126,7 @@ cp -R $DV_SUPPORT_DIR/vdb $JBOSS_HOME_DV/standalone/deployments
 
 echo "  - setting up dv standalone.xml configuration adjustments..."
 echo
-cp $DV_SUPPORT_DIR/standalone.dv.xml $SERVER_CONF_DV/standalone.xml
+cp $DV_SUPPORT_DIR/dv62-standalone.xml $SERVER_CONF_DV/standalone.xml
 
 # Final instructions to user to start and run demo.                                                                  
 echo
