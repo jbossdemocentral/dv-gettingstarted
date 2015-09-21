@@ -36,9 +36,12 @@ B. Download DV 6.1 or 6.2
 -For DV 6.1, Download from jboss.org http://www.jboss.org/products/datavirt/download/  
 -For DV 6.2, Download EAP 6.4.0 from jboss.org http://www.jboss.org/products/eap/download/  
 -For DV 6.2, Download EAP 6.4.3 Roll up patch from CSP https://access.redhat.com/jbossnetwork/restricted/softwareDownload.html?softwareId=39353  
-C. Install DV 6.1 or 6.2  
+C. Install DV 6.1 or 6.2 with ```java -jar installer```  
 -For DV 6.1 install Data Virtualization enabling OData  
 -For DV 6.2 Install EAP, EAP Rollup Patch and Data Virtualization enabling OData  
+The roll up patch can be installed
+Linux: ```bin/jboss-cli.sh "patch apply path/to/jboss-eap-6.4.3-patch.zip"```
+Windows: ```bin\jboss-cli.bat "patch apply --override-all path\to\jboss-eap-6.4.3-patch.zip"```
   
 **STEP 2:** Import, Preview Data and Deploy  
 -NOTE:  In order to use the source files and VDB the Parent folder has to be updated to your local git clone directory for the project.  To do that run the script below otherwise manual update to the files:
@@ -72,7 +75,7 @@ CustomerContextVDB.vdb
   
 As Easy as 1,2,3....   
 
-[*Back to option list*](#setting-up-your-local-environment)
+[*Back to option list*](#setting-up-your-environment)
 
 ### Option 2 Running and previewing without JBDS  
 This option walks you through the automated steps to install, run and test the demo in a local environment.  This option has scripts for DV 6.2.  
@@ -106,7 +109,7 @@ B. Download the required DV 6.2 files and place in the software folder
  
 As Easy as 1,2,3....  
 
-[*Back to option list*](#setting-up-your-local-environment)
+[*Back to option list*](#setting-up-your-environment)
 
 ### Option 3 Running in a container   
 This option walks you through the automated steps to install, run and test the demo in a Container.  This option has scripts for DV 6.2.  
@@ -152,4 +155,4 @@ This option walks you through the automated steps to install, run and test the d
  
 As Easy as 1,2,3....  
 
-[*Back to option list*](#setting-up-your-local-environment)  
+[*Back to option list*](#setting-up-your-environment)  
