@@ -8,11 +8,11 @@ If you have any issues please add an issue and we will resolve.
 
 Setting up your environment
 ---------------------------------
-
 [Default Usernames and Passwords](#credentials-setup-during-install)  
-1. [Running and Previewing within JBDS (Manual Steps for DV 6.1 or DV 6.2)](#option-1-running-and-previewing-within-jbds)
-2. [Running and Previewing wihtout JBDS (Automated scripts for DV 6.2)](#option-2-running-and-previewing-without-jbds)
-3. [Running in a Container (Automated scripts for DV 6.2)](#option-3-running-in-a-container)
+
+1. [Running and Previewing within JBDS (Manual Steps for DV 6.1 or DV 6.2)](#option-1-running-and-previewing-within-jbds)  
+2. [Running and Previewing wihtout JBDS (Automated scripts for DV 6.2)](#option-2-running-and-previewing-without-jbds)  
+3. [Running in a Container (Automated scripts for DV 6.2)](#option-3-running-in-a-container)  
 
 ![alt text](https://raw.githubusercontent.com/jbossdemocentral/dv-gettingstarted/master/docs/images/dvdemo-gettingstarted2.png "Teiid VDBs")  
 
