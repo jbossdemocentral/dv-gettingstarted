@@ -1,11 +1,16 @@
 ## Data Virtualization Getting Started for a Developer Hello World Experience
 
+This Project contains a CSV file and XML File as datasources for a federated view in a Virtual Database.  You can view the project, preview data, deploy the VDB and browse to the OData URLs. 
+
 **NOTE:**  
 **In order to run this demo with DV 6.2 you must download EAP 6.4.0, EAP 6.4.3 Patch and DV 6.2.**  
 If you have any issues please add an issue and we will resolve.  
-Option 1 has been tested with Windows and Linux.  
-Option 2 has been tested with Linux.  
-Option 3 is being updated.  
+
+Setting up your environment
+---------------------------------
+1. [Running and Previewing within JBDS (Manual Steps for DV 6.1 or DV 6.2)](#Option-1-Running-and-previewing-within-JBDS)
+2. [Running and Previewing wihtout JBDS (Automated scripts for DV 6.2)](#Option-2-Running-and-previewing-without-JBDS)
+3. [Running in a Container (Automated scripts for DV 6.2)](#Option-3-Running-in-a-container)
 
 ![alt text](https://raw.githubusercontent.com/jbossdemocentral/dv-gettingstarted/master/docs/images/dvdemo-gettingstarted2.png "Teiid VDBs")  
 
@@ -22,7 +27,9 @@ dashboardAdmin/redhat1!
 
 ## Steps to Run the Demo  
 
-**OPTION 1 - RUNNING AND PREVIEWING WITHIN JBDS (Manual Install Steps)**:  
+### Option 1 Running and previewing within JBDS  
+This option walks you through the manual steps to install, run and test the demo in a local environment.  You can also view the Teiid project in JDBS.  
+
 **STEP 1:** Clone the Repository and Download EAP, EAP Patch and Data Virtualization  
 A. git clone https://github.com/jbossdemocentral/dv-gettingstarted.git  
 B. Download DV 6.1 or 6.2   
@@ -65,7 +72,11 @@ CustomerContextVDB.vdb
   
 As Easy as 1,2,3....   
 
-**OPTION 2 - STEPS TO RUN WITHOUT JBDS (Automated Install)**:  
+[*Back to option list*](#setting-up-your-local-environment)
+
+### Option 2 Running and previewing without JBDS  
+This option walks you through the automated steps to install, run and test the demo in a local environment.  This option has scripts for DV 6.2.  
+
 **STEP 1:** Clone the Repository and Download EAP, EAP Patch and Data Virtualization  
 A. git clone https://github.com/jbossdemocentral/dv-gettingstarted.git  
 B. Download the required DV 6.2 files and place in the software folder
@@ -95,7 +106,10 @@ B. Download the required DV 6.2 files and place in the software folder
  
 As Easy as 1,2,3....  
 
-**OPTION 3 - CONTAINERIZED INSTALL (Automated Install)**: 
+[*Back to option list*](#setting-up-your-local-environment)
+
+### Option 3 Running in a container   
+This option walks you through the automated steps to install, run and test the demo in a Container.  This option has scripts for DV 6.2.  
 
 **STEP 1:** Clone the Repository and Download EAP, EAP Patch and Data Virtualization  
 -git clone https://github.com/jbossdemocentral/dv-gettingstarted.git  
@@ -137,3 +151,5 @@ As Easy as 1,2,3....
 		```http://<DOCKER_HOST>:8080/dashboard/``` 
  
 As Easy as 1,2,3....  
+
+[*Back to option list*](#setting-up-your-local-environment)  
