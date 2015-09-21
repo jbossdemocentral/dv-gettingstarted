@@ -26,6 +26,8 @@ teiidUser/redhat1!
 **Datavirtualization Dashboard Credentials:**  
 dashboardAdmin/redhat1!  
 
+[*Back to option list*](#setting-up-your-environment)  
+
 ## Steps to Run the Demo  
 
 ### Option 1 Running and previewing within JBDS  
