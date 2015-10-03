@@ -94,8 +94,8 @@ B. Download the required DV 6.2 files and place in the software folder
   
 **STEP 2:** Run Scripts in the scripts folder  
 -NOTE: In this option the data is set in ${jboss.home.dir}/standalone/data/ and the standalone.xml is update for the VDB.  The corresponding bat files require update.  
--Run ```./init.sh``` to setup DV  
--Run ```./run.sh``` to run DV.  Verify DV started completely with ```tail -f dv.log```   
+-Run ```./init.sh``` or ```./init.bat``` to setup DV
+-Run ```./run.sh``` ```./run.bat``` to run DV.  Verify DV started completely with ```tail -f dv.log```   
 -Run ```./test.sh > out.txt``` to test the OData url  
   
 **STEP 3:** Browse the Data Virtualization and the Data  
