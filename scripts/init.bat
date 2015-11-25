@@ -24,13 +24,26 @@ REM wipe screen.
 cls
 
 echo.
-echo Setting up the %DEMO%
+echo #############################################################
+echo ##                                                         ##   
+echo ##  Setting up the                                         ##
+echo ##     %DEMO%      ##
+echo ##                                                         ##   
+echo ##                                                         ##   
+echo ##    ####   ###  #####  ###   #   # ##### ####  #####     ##
+echo ##    #   # #   #   #   #   #  #   #   #   #   #   #       ##
+echo ##    #   # #####   #   #####  #   #   #   ####    #       ##
+echo ##    #   # #   #   #   #   #   # #    #   # #     #       ##
+echo ##    ####  #   #   #   #   #    #   ##### #  #    #       ##
+echo ##                                                         ##   
+echo ##                                                         ##   
+echo ##  brought to you by %AUTHORS%                        ##
+echo ##                                                         ##   
+echo ##  %PROJECT%  ##
+echo ##                                                         ##
+echo #############################################################
 echo.
-echo brought to you by,   
-echo   %AUTHORS%
-echo.
-echo   %PROJECT%
-echo.
+
 
 REM make some checks first before proceeding.	
 if exist "%SRC_DIR%\%DV%" (
@@ -73,12 +86,8 @@ if exist "%INSTALL_DIR%" (
 	rmdir /s /q "%INSTALL_DIR%"
 )
 
-echo Starting JBoss EAP Install. Press any key or wait 5 seconds
-timeout 5
-
 REM Run EAP installer
-echo.
-echo Product installer running now...
+echo EAP installer running now...
 echo.
 call java -jar %SRC_DIR%\%EAP% %DV_SUPPORT_DIR%\eap64-installer.xml 
 
@@ -88,25 +97,12 @@ if not "%ERRORLEVEL%" == "0" (
 	GOTO :EOF
 )
 
-echo Installed JBoss EAP server
-echo.
-echo Starting JBoss EAP server
 
-
-start "" %JBOSS_HOME_DV%\bin\standalone.bat ^>console.log
+call set NOPAUSE=true
 
 echo.
-echo Waiting for JBoss EAP to Start
-
-:loop
-timeout /t 5 > null 2>&1
-(type console.log |find "started in") > null 2>&1
-if errorlevel 1 goto loop
-
+echo Applying JBoss EAP patch now...
 echo.
-echo JBoss EAP server started
-
-
 call %JBOSS_HOME_DV%\bin\jboss-cli.bat --command="patch apply %SRC_DIR%\jboss-eap-6.4.3-patch.zip --override-all"
 
 if not "%ERRORLEVEL%" == "0" (
@@ -115,30 +111,10 @@ if not "%ERRORLEVEL%" == "0" (
 	GOTO :EOF
 )
 
-echo Installed JBoss EAP patch...
-echo.
-
-echo.
-echo Shutting down JBoss EAP server...
-
-call %JBOSS_HOME_DV%\bin\jboss-cli.bat --connect command=:shutdown
-
-if not "%ERRORLEVEL%" == "0" (
-	echo Error occurred during JBoss EAP shutdown!
-	echo.
-	GOTO :EOF
-)
-
-echo.
-echo Shutdown JBoss EAP server...
-echo.
-
-echo Starting JBoss DV Install. Press any key or wait 5 seconds
-timeout 5 > null 2>&1
 
 REM Run JBoss DV installer.
 echo.
-echo Installing JBoss DV now...
+echo DV installer running now...
 echo.
 call java -jar %SRC_DIR%\%DV% %DV_SUPPORT_DIR%\dv62-installer.xml 
 
@@ -149,22 +125,14 @@ if not "%ERRORLEVEL%" == "0" (
 )
 
 echo.
-echo Post JBoss DV install configuration...
-echo.
-
-
-echo.
 echo  - install teiid security files...
 echo.
 xcopy /Y /Q /S "%DV_SUPPORT_DIR%\application*" "%SERVER_CONF_DV%"
 
-
-echo.
 echo   - move data files...
 echo.
 xcopy /Y /Q /S "%DV_SUPPORT_DIR%\data\*" "%JBOSS_HOME_DV%\standalone\data"
 
-echo.
 echo   - move virtual database...
 echo.
 xcopy /Y /Q "%DV_SUPPORT_DIR%\vdb" "%JBOSS_HOME_DV%\standalone\deployments"
@@ -172,13 +140,16 @@ xcopy /Y /Q "%DV_SUPPORT_DIR%\vdb" "%JBOSS_HOME_DV%\standalone\deployments"
 echo   - setting up dv standalone.xml configuration adjustments...
 echo.
 xcopy /Y /Q "%DV_SUPPORT_DIR%\dv62-standalone.xml" "%SERVER_CONF_DV%\standalone.xml"
-
-echo   - cleaning up install log...
-echo.
 del console.log > null 2>&1
 
 REM Final instructions to user to start and run demo.                                                                  
 echo.
-echo See README.md for any additional steps                   
-echo %DEMO% Setup Complete.
+echo =======================================================
+echo =                                                     =
+echo =  See README.md for any additional steps             =
+echo =                                                     = 
+echo =  Demo setup complete.                               =
+echo =                                                     =
+echo =======================================================
 echo.
+

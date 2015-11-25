@@ -10,7 +10,7 @@ SERVER_CONF_DV=$JBOSS_HOME_DV/standalone/configuration/
 SRC_DIR=../software
 DV_SUPPORT_DIR=../support
 PRJ_DIR=../projects
-DV=jboss-dv-installer-6.2.0.redhat-2.jar
+DV=jboss-dv-installer-6.2.0.redhat-3.jar
 DV_VERSION=6.2.0
 EAP=jboss-eap-6.4.0-installer.jar
 EAP_VERSION=6.4.0
@@ -19,13 +19,25 @@ EAP_PATCH=jboss-eap-6.4.3-patch.zip
 # wipe screen.
 clear 
 
-echo  
-echo "Setting up the ${DEMO}"  
-echo    
-echo "brought to you by,"   
-echo "  ${AUTHORS}"
-echo 
-echo "  ${PROJECT}"
+echo
+echo "#############################################################"
+echo "##                                                         ##"   
+echo "##  Setting up the                                         ##"
+echo "##     ${DEMO}      ##"
+echo "##                                                         ##"   
+echo "##                                                         ##"   
+echo "##    ####   ###  #####  ###   #   # ##### ####  #####     ##"
+echo "##    #   # #   #   #   #   #  #   #   #   #   #   #       ##"
+echo "##    #   # #####   #   #####  #   #   #   ####    #       ##"
+echo "##    #   # #   #   #   #   #   # #    #   # #     #       ##"
+echo "##    ####  #   #   #   #   #    #   ##### #  #    #       ##"
+echo "##                                                         ##"   
+echo "##                                                         ##"   
+echo "##  brought to you by ${AUTHORS}                        ##"
+echo "##                                                         ##"   
+echo "##  ${PROJECT}  ##"
+echo "##                                                         ##"   
+echo "#############################################################"
 echo
 
 command -v mvn -q >/dev/null 2>&1 || { echo >&2 "Maven is required but not installed yet... aborting."; exit 1; }
@@ -72,7 +84,7 @@ if [ -x $INSTALL_DIR ]; then
 fi
 
 echo
-echo "Starting JBoss EAP install..." 
+echo "Installing JBoss EAP now..." 
 echo
 java -jar $SRC_DIR/$EAP $DV_SUPPORT_DIR/eap64-installer.xml
 
@@ -83,25 +95,8 @@ if [ $? -ne 0 ]; then
 fi
 
 echo
-echo "Installed JBoss EAP server..."
-echo
-
-echo "Starting JBoss EAP Server..."
-echo
-
-#  start server install the eap 6.4.3 patch
-$JBOSS_HOME_DV/bin/standalone.sh >>console.log &
-
-sleep 10
-
-tail -f $JBOSS_HOME_DV/standalone/log/server.log | grep -m 1 'started in' | xargs echo '' >> $JBOSS_HOME_DV/standalone/log/server.log
-
-echo
-echo "Started JBoss EAP server"
-
 echo "Installing JBoss EAP 6.4.3 Patch ..."
-
-# install patch
+echo
 $JBOSS_HOME_DV/bin/jboss-cli.sh --command="patch apply $SRC_DIR/jboss-eap-6.4.3-patch.zip"
 
 if [ $? -ne 0 ]; then
@@ -110,25 +105,8 @@ if [ $? -ne 0 ]; then
 	exit
 fi
 
-echo "Installed JBoss EAP patch..."
-echo
-
-echo
-echo "Shutting down JBoss EAP server..."
-
-$JBOSS_HOME_DV/bin/jboss-cli.sh --connect command=:shutdown
-
-echo
-echo "Shutdown JBoss EAP server..."
-echo
-
-if [ $? -ne 0 ]; then
-	echo
-	echo "Error occurred during JBoss EAP shutdown!"
-	exit
-fi
-
 # Run JBoss DV installer.
+echo
 echo "Installing JBoss DV now..."
 echo
 java -jar $SRC_DIR/$DV $DV_SUPPORT_DIR/dv62-installer.xml
@@ -140,20 +118,14 @@ if [ $? -ne 0 ]; then
 fi
 
 echo
-echo "Post JBoss DV install configuration..."
-echo
-
-echo
 echo "  - install teiid security files..."
 echo
 cp $DV_SUPPORT_DIR/application* $SERVER_CONF_DV
 
-echo
 echo "  - move data files..."
 echo
 cp -R $DV_SUPPORT_DIR/data/* $JBOSS_HOME_DV/standalone/data
 
-echo
 echo "  - move virtual database..."
 echo
 cp -R $DV_SUPPORT_DIR/vdb $JBOSS_HOME_DV/standalone/deployments
@@ -161,14 +133,15 @@ cp -R $DV_SUPPORT_DIR/vdb $JBOSS_HOME_DV/standalone/deployments
 echo "  - setting up dv standalone.xml configuration adjustments..."
 echo
 cp $DV_SUPPORT_DIR/dv62-standalone.xml $SERVER_CONF_DV/standalone.xml
-
-echo "  - cleaning up install log..."
-echo
 rm console.log
 
-# Final instructions to user to start and run demo.                                                                  
 echo
-echo "See README.md for any additional steps"                   
-echo "$DEMO Setup Complete."
+echo "======================================================="
+echo "=                                                     ="
+echo "=  See README.md for any additional steps             ="
+echo "=                                                     =" 
+echo "=  Demo setup complete.                               ="
+echo "=                                                     ="
+echo "======================================================="
 echo
 
